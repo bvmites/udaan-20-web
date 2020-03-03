@@ -82,6 +82,7 @@
     .events p {
         font-size: 60px;
         font-weight: bold;
+        margin-left: 24px;
     }
 
     .events img {
