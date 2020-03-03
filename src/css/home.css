@@ -1,0 +1,59 @@
+a:hover {
+    cursor: pointer;
+}
+
+
+
+.pullUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    position: absolute;
+    bottom: 2.5%;
+    border: 0;
+    outline: 0;
+    color: black;
+    font-weight: bolder;
+    width: 100%;
+    font-size: 48px;
+    cursor: pointer;
+    animation: dribble 1s alternate infinite ease-in;
+}
+
+@keyframes dribble {
+    from {
+        transform: translateY(-12px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.udaan_logo {
+    width: 50%;
+    object-fit: contain;
+    left: 50%;
+    margin-bottom: 24px;
+    /*-ms-transform: translateX(-50%);*/
+    /*-webkit-transform: translateX(-50%);*/
+    /*transform: translateX(-50%);*/
+/*animation: up-down-movement 1s infinite alternate;*/
+}
+
+
+@media screen and (max-width: 786px) {
+    .udaan_logo {
+        width: 100%;
+        left: 50%;
+    }
+}
+
+@keyframes up-down-movement {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-20px);
+    }
+}

@@ -1,0 +1,68 @@
+<template>
+    <div id="Events">
+        <div class="background"></div>
+        <div class="center-piece">
+            <div class="departments">
+                <ul class="department" v-for="department in departments" v-bind:key="department">
+                    <li class="deptName"><a class="deptEvent" @click="$router.push(department.url)">{{ department.name }}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    export default {
+        name: "Events",
+        data() {
+            return {
+                departments: [
+                    {
+                        name: "Civil",
+                        url: 'boa'
+                    },
+                    {
+                        name: "Computer",
+                        url: 'automotivePhilosophers'
+                    },
+                    {
+                        name: "Electronics",
+                        url: 'chamberOfCoders'
+                    },
+                    {
+                        name: "Electrical",
+                        url: 'halfWavePrince'
+                    },
+                    {
+                        name: 'IT',
+                        url: 'gobletOfWorkshops'
+                    },
+                    {
+                        name: "EC",
+                        url: 'scamandersSuitcase'
+                    },
+                    {
+                        name: "Mechanical",
+                        url: 'madHollows'
+                    },
+                    {
+                        name: "Production",
+                        url: 'orderOfOhms'
+                    },
+                ]
+            }
+        },
+    }
+</script>
+
+<style scoped>
+    @import "../css/events.css";
+    .background {
+        position: absolute;
+        background: #CFEDFF;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        transition: visibility 0.5s ease;
+    }
+</style>
