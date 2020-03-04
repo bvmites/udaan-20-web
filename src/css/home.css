@@ -3,14 +3,13 @@ a:hover {
 }
 
 
-
 .pullUp {
     display: flex;
     justify-content: center;
     align-items: center;
     background: transparent;
     position: absolute;
-    bottom: 2.5%;
+    bottom: 1.5%;
     border: 0;
     outline: 0;
     color: black;
@@ -31,22 +30,23 @@ a:hover {
 }
 
 .udaan_logo {
-    width: 65%;
+    width: 60%;
     object-fit: contain;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*top: 50%;*/
+    /*transform: translate(-50%, -50%);*/
     /*-ms-transform: translateX(-50%);*/
     /*-webkit-transform: translateX(-50%);*/
     /*transform: translateX(-50%);*/
-/*animation: up-down-movement 1s infinite alternate;*/
+    animation-delay: 0.5s;
+    animation: logo_animation 2.5s 1 alternate;
 }
 
 
 @media screen and (max-width: 1400px) {
     .udaan_logo {
-        width: 80%;
+        width: 70%;
     }
 }
 
@@ -56,11 +56,11 @@ a:hover {
     }
 }
 
-@keyframes up-down-movement {
+@keyframes logo_animation {
     from {
-        transform: translateY(0);
+        opacity: 0;
     }
     to {
-        transform: translateY(-20px);
+        opacity: 1;
     }
 }

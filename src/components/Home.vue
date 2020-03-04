@@ -2,8 +2,9 @@
     <div id="Home" class="main">
         <div id="particles-js" class="background"></div>
         <canvas id="fluid" style="width: 100%; height: 100%;"></canvas>
-        <div class="main-container">
-            <img class="udaan_logo" src="../assets/logo.png" alt="">
+        <div class="main-container mx-auto d-block">
+            <img class="udaan_logo mx-auto d-block" src="../assets/logo.png" alt="">
+            <p class="text-center date">6-8 April, 2020</p>
             <!--        <a class="pullUp" @click="$router.push('/events')"><i class="fa fa-angle-down" aria-hidden="true"></i>-->
             <!--        </a>-->
             <!--            <div ref="events" class="events">-->
@@ -55,12 +56,13 @@
             <!--                </div>-->
             <!--            </div>-->
         </div>
-        <a class="pullUp" @click="$router.push('events')"><i class="fa fa-angle-down" aria-hidden="true"></i>K</a>
+        <a class="pullUp" @click="$router.push('events')"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
     </div>
 </template>
 
 <script>
     import 'particles.js'
+
     export default {
         name: "Home",
         mounted() {
@@ -186,10 +188,17 @@
 <style scoped type="text/css">
     @import "../css/home.css";
 
+    .date{
+        margin-top: 16px;
+        color: white;
+        font-size: 30px;
+    }
+
     .main-container {
-        /*position: absolute;*/
-        /*margin-top: 100px;*/
-        height: 100%;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .background {
@@ -201,7 +210,7 @@
         z-index: -1;
     }
 
-    canvas{
+    canvas {
         position: fixed;
         top: 0;
         bottom: 0;
@@ -213,7 +222,7 @@
     }
 
     canvas {
-        background: linear-gradient(to right ,#232526, #414345, #141e30, #243b55);
+        background: linear-gradient(to right, #232526, #414345, #141e30, #243b55);
         background-size: 400% 400%;
         animation: gradient 5s ease infinite;
         opacity: 0.3;
@@ -230,6 +239,7 @@
             background-position: 0% 50%;
         }
     }
+
     .events p {
         font-size: 60px;
         font-weight: bold;

@@ -90,5 +90,8 @@
         font-weight: 400;
     }
 
+    a:hover{
+        color: white;
+    }
 
 </style>
