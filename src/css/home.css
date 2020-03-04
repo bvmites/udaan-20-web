@@ -31,10 +31,12 @@ a:hover {
 }
 
 .udaan_logo {
-    width: 50%;
+    width: 65%;
     object-fit: contain;
+    position: absolute;
     left: 50%;
-    margin-bottom: 24px;
+    top: 50%;
+    transform: translate(-50%, -50%);
     /*-ms-transform: translateX(-50%);*/
     /*-webkit-transform: translateX(-50%);*/
     /*transform: translateX(-50%);*/
@@ -42,10 +44,15 @@ a:hover {
 }
 
 
+@media screen and (max-width: 1400px) {
+    .udaan_logo {
+        width: 80%;
+    }
+}
+
 @media screen and (max-width: 786px) {
     .udaan_logo {
         width: 100%;
-        left: 50%;
     }
 }
 
