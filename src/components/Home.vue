@@ -1,63 +1,18 @@
 <template>
-    <div id="Home" class="main">
-        <div id="particles-js" class="background"></div>
-        <canvas id="fluid" style="width: 100%; height: 100%;"></canvas>
-        <div class="main-container mx-auto d-block">
-            <img class="udaan_logo mx-auto d-block" src="../assets/logo.png" alt="">
-            <p class="text-center date">6-8 April, 2020</p>
-            <!--        <a class="pullUp" @click="$router.push('/events')"><i class="fa fa-angle-down" aria-hidden="true"></i>-->
-            <!--        </a>-->
-            <!--            <div ref="events" class="events">-->
-            <!--                <div class="civil">-->
-            <!--                    <img src="../assets/civil_header.png" alt="">-->
-            <!--                    <div class="content" style="height: 500px">-->
-            <!--                        <p>Civil</p>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
-            <!--            <div class="events">-->
-            <!--                <div class="computer">-->
-            <!--                    <img src="../assets/computer_header.png" alt="">-->
-            <!--                    <div class="content" style="height: 500px">-->
-            <!--                        <p>Computer/IT</p>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
-            <!--            <div class="events">-->
-            <!--                <div class="electrical">-->
-            <!--                    <img src="../assets/electrical_header.png" alt="">-->
-            <!--                    <div class="content" style="height: 500px">-->
-            <!--                        <p>Electrical</p>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
-            <!--            <div class="events">-->
-            <!--                <div class="electronics">-->
-            <!--                    <img src="../assets/electronics_header.png" alt="">-->
-            <!--                    <div class="content" style="height: 500px">-->
-            <!--                        <p>EC/EL</p>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
-            <!--            <div class="events">-->
-            <!--                <div class="mechanical">-->
-            <!--                    <img src="../assets/mechanical_header.png" alt="">-->
-            <!--                    <div class="content" style="height: 500px">-->
-            <!--                        <p>Mechanical</p>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
-            <!--            <div class="events">-->
-            <!--                <div class="production">-->
-            <!--                    <img src="../assets/production_header.png" alt="">-->
-            <!--                    <div class="content" style="height: 500px">-->
-            <!--                        <p>Production</p>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
+    <transition name="slide-up">
+        <div id="Home" class="main background">
+<!--            <div id="particles-js" class="background"></div>-->
+            <canvas id="fluid" style="width: 100%; height: 100%;"></canvas>
+            <div class="main-container mx-auto d-block">
+                <img class="udaan_logo mx-auto d-block" src="../assets/logo.png" alt="">
+                <p class="text-center date">6-8 April, 2020</p>
+            </div>
+            <div class="pullUp">
+                <a class="text-center" @click="$router.push('events')"><i class="fa fa-angle-down"
+                                                                          aria-hidden="true"></i></a>
+            </div>
         </div>
-        <a class="pullUp" @click="$router.push('events')"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-    </div>
+    </transition>
 </template>
 
 <script>
@@ -75,7 +30,7 @@
         },
         methods: {
             initParticles() {
-                window.particlesJS("particles-js", {
+                window.particlesJS("Home", {
                     "particles": {
                         "number": {
                             "value": 80,
@@ -188,7 +143,7 @@
 <style scoped type="text/css">
     @import "../css/home.css";
 
-    .date{
+    .date {
         margin-top: 16px;
         color: white;
         font-size: 30px;
@@ -240,62 +195,18 @@
         }
     }
 
-    .events p {
-        font-size: 60px;
-        font-weight: bold;
-        margin-left: 24px;
+    .slide-up-leave-active {
+        animation: slide-up 0.5s ease-in;
     }
 
-    .events img {
-        width: 100%;
-        object-fit: contain;
-    }
-
-    .civil .content {
-        background: #f5a1af;
-    }
-
-    .computer img {
-        background: #f5a1af;
-    }
-
-    .computer .content {
-        background: #cbe8f7;
-    }
-
-    .computer img {
-        background: #f5a1af;
-    }
-
-    .electrical .content {
-        background: #9aaaaf;
-    }
-
-    .electrical img {
-        background: #cbe8f7;
-    }
-
-    .electronics .content {
-        background: #b0fe76;
-    }
-
-    .electronics img {
-        background: #9aaaaf;
-    }
-
-    .mechanical .content {
-        background: #ffcc7b;
-    }
-
-    .mechanical img {
-        background: #b0fe76;
-    }
-
-    .production .content {
-        background: #99dbff;
-    }
-
-    .production img {
-        background: #ffcc7b;
+    @keyframes slide-up {
+        0% {
+            transform: translateY(0);
+            opacity: 1
+        }
+        100% {
+            transform: translateY(-100%);
+            opacity: 0
+        }
     }
 </style>

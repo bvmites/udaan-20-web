@@ -12,11 +12,10 @@ a:hover {
     bottom: 1.5%;
     border: 0;
     outline: 0;
-    color: black;
+    color: white;
     font-weight: bolder;
     width: 100%;
     font-size: 48px;
-    cursor: pointer;
     animation: dribble 1s alternate infinite ease-in;
 }
 
@@ -32,13 +31,6 @@ a:hover {
 .udaan_logo {
     width: 60%;
     object-fit: contain;
-    /*position: absolute;*/
-    /*left: 50%;*/
-    /*top: 50%;*/
-    /*transform: translate(-50%, -50%);*/
-    /*-ms-transform: translateX(-50%);*/
-    /*-webkit-transform: translateX(-50%);*/
-    /*transform: translateX(-50%);*/
     animation-delay: 0.5s;
     animation: logo_animation 2.5s 1 alternate;
 }
