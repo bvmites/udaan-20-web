@@ -8,8 +8,7 @@
                 <p class="text-center date">6-8 April, 2020</p>
             </div>
             <div class="pullUp">
-                <a class="text-center" @click="$router.push('events')"><i class="fa fa-angle-down"
-                                                                          aria-hidden="true"></i></a>
+                <a class="text-center" @click="$router.push('events')"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
             </div>
         </div>
     </transition>
@@ -142,57 +141,16 @@
 
 <style scoped type="text/css">
     @import "../css/home.css";
+    @import "../css/common_style.css";
+
+    .main-container{
+        width: 100%;
+    }
 
     .date {
         margin-top: 16px;
         color: white;
         font-size: 30px;
-    }
-
-    .main-container {
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .background {
-        display: block;
-        position: absolute;
-        background: #0d0d0d;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-    }
-
-    canvas {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-    }
-
-    canvas {
-        background: linear-gradient(to right, #232526, #414345, #141e30, #243b55);
-        background-size: 400% 400%;
-        animation: gradient 5s ease infinite;
-        opacity: 0.3;
-    }
-
-    @keyframes gradient {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
     }
 
     .slide-up-leave-active {

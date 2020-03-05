@@ -1,5 +1,6 @@
 .departments{
     /*position: fixed;*/
+    width: fit-content;
 }
 
 li {
