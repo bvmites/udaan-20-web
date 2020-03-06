@@ -147,6 +147,10 @@
         width: 100%;
     }
 
+    .background{
+        background: #0d0d0d;
+    }
+
     .date {
         margin-top: 16px;
         color: white;

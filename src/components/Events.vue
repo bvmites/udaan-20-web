@@ -1,17 +1,42 @@
 <template>
     <div id="Events" class="main background">
+        <div id="particles-js" class="bg"></div>
         <canvas id="fluid" style="width: 100%; height: 100%;"></canvas>
-        <div class="row h-100 m-0">
-<!--            <div class="col-xl-6 col-md-6 my-auto">-->
-<!--                <div class="departments events-headers ml-md-4 ml-2">-->
-<!--                    <ul class="department m-0 p-0" v-for="department in departments" v-bind:key="department">-->
-<!--                        <li class="deptName"><a class="deptEvent" @click="$router.push(department.url)">{{-->
-<!--                            department.name }}</a></li>-->
-<!--                        <img src="" alt="">-->
-<!--                    </ul>-->
-<!--                </div>-->
-
-<!--            </div>-->
+        <div class="events-container text-center">
+        <div class="row m-0">
+            <div class="col-xl-4 col-lg-4 col-md-2 my-auto">
+                <p class="events-headers">Tech</p>
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-10 my-auto">
+                <table class="table table-borderless">
+                    <tr>
+                        <td><img class="mx-auto d-block" src="../assets/TheRoadtoUrbanization.png" alt=""
+                                 @click="$router.push('TheRoadtoUrbanization')"></td>
+                        <td><img class="mx-auto d-block" src="../assets/Cyber-Clan.png" alt=""></td>
+                        <td><img class="mx-auto d-block" src="../assets/Wire-MoretoWireless.png" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td><img class="mx-auto d-block" src="../assets/PulleyingtheFuture.png" alt=""></td>
+                        <td><img class="mx-auto d-block" src="../assets/LightingYearsAhead.png" alt=""></td>
+                        <td><img class="mx-auto d-block" src="../assets/workshop.png" alt=""></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row m-0 mt-4">
+            <div class="col-xl-4 col-lg-4 col-md-2 my-auto">
+                <p class="events-headers">Non Tech</p>
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-10 my-auto">
+                <table class="table table-borderless">
+                    <tr>
+                        <td><img class="mx-auto d-block" src="../assets/flagshipEvents.png" alt=""></td>
+                        <td><img class="mx-auto d-block" src="../assets/madHouse.png" alt=""></td>
+                        <td><img class="mx-auto d-block" src="../assets/jackAPullBoy.png" alt=""></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
         </div>
     </div>
 </template>
@@ -25,62 +50,57 @@
                     {
                         name: "The Road to Urbanization",
                         url: '/',
-                        img: "../asstes/TheRoadtoUrbanization.png"
+                        img: "../assets/TheRoadtoUrbanization.png"
                     },
                     {
                         name: "Cyber-Clan",
                         url: '/',
-                        img: "../asstes/Cyber-Clan.png"
+                        img: "../assets/Cyber-Clan.png"
                     },
                     {
                         name: "Wire-More to Wireless",
                         url: '/',
-                        img: "../asstes/Wire-MoretoWireless.png"
+                        img: "../assets/Wire-MoretoWireless.png"
                     },
                     {
                         name: "Pulleying the Future",
                         url: '/',
-                        img: "../asstes/PulleyingtheFuture.png"
+                        img: "../assets/PulleyingtheFuture.png"
                     },
                     {
                         name: 'Lighting Years Ahead',
                         url: '/',
-                        img: "../asstes/LightingYearsAhead.png"
+                        img: "../assets/LightingYearsAhead.png"
                     },
                     {
                         name: "M.A.D. House",
                         url: '/',
-                        img: "../asstes/madHouse.png"
+                        img: "../assets/madHouse.png"
                     },
                     {
                         name: "Flagship Events",
                         url: '/',
-                        img: "../asstes/flagshipEvents.png"
+                        img: "../assets/flagshipEvents.png"
                     },
                     {
                         name: "Workshop",
                         url: '/',
-                        img: "../asstes/workshop.png"
+                        img: "../assets/workshop.png"
                     },
                     {
                         name: "Jack a Dull Boy?",
                         url: '/',
-                        img: "../asstes/jackADullBoy.png"
+                        img: "../assets/jackADullBoy.png"
                     },
                 ]
             }
         },
         mounted() {
-            // window.onload = function() {
-            //     Particles.init({
-            //         selector: '.background'
-            //     });
-            // };
             this.initParticles()
         },
         methods: {
             initParticles() {
-                window.particlesJS("Events", {
+                window.particlesJS("particles-js", {
                     "particles": {
                         "number": {
                             "value": 80,
@@ -90,7 +110,7 @@
                             }
                         },
                         "color": {
-                            "value": "#919191"
+                            "value": "#cccccc"
                         },
                         "shape": {
                             "type": "circle",
@@ -125,7 +145,7 @@
                         "line_linked": {
                             "enable": true,
                             "distance": 100,
-                            "color": "#919191",
+                            "color": "#CCCCCC",
                             "opacity": 0.4,
                             "width": 1
                         },
@@ -198,20 +218,65 @@
         color: white;
     }
 
-    .background{
-        background-image: linear-gradient(to bottom right, #10054d, #45108a)
+    canvas{
+        background-image: linear-gradient(to right, #10054d, #45108a, #30048a, #45108a);
+        opacity: 1;
+        animation: gradient 7s ease infinite;
     }
 
-    .main-container {
-        margin-top: 36px;
-    }
-    .events-headers{
-        font-size: 20px;
+    #particles-js {
+        z-index: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: 50% 50%;
     }
 
-    @media screen and (max-width: 786px) {
-        .udaan_logo {
+    .bg {
+        /*background-image: linear-gradient(to bottom right, #10054d, #45108a);*/
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+
+    .events-container {
+        width: 100%;
+        margin-top: 72px;
+    }
+
+    .events-headers {
+        font-family: Neutronium;
+        font-size: 400%;
+        color: white;
+    }
+
+    @media screen and (max-width: 960px) {
+        tr img {
             width: 100%;
         }
+    }
+    @media screen and (min-width: 960px) {
+        tr img {
+            width: 57%;
+        }
+    }
+
+    tr img {
+        /*width: 100%;*/
+        object-fit: contain;
+    }
+
+    tr img:hover{
+        transform: scale(1.2);
+        transition: all 0.5s ease;
+    }
+
+    @font-face {
+        font-family: 'Neutronium';
+        src: url('../assets/font/Neutronium.ttf');
+        font-weight: normal;
+        font-style: normal;
     }
 </style>
