@@ -24,36 +24,40 @@
             return {
                 departments: [
                     {
-                        name: "Civil",
-                        url: 'boa'
+                        name: "The Road to Urbanization",
+                        url: '/'
                     },
                     {
-                        name: "Computer",
-                        url: 'automotivePhilosophers'
+                        name: "Cyber-Clan",
+                        url: '/'
                     },
                     {
-                        name: "Electronics",
-                        url: 'chamberOfCoders'
+                        name: "Wire-More to Wireless",
+                        url: '/'
                     },
                     {
-                        name: "Electrical",
-                        url: 'halfWavePrince'
+                        name: "Pulleying the Future",
+                        url: '/'
                     },
                     {
-                        name: 'IT',
-                        url: 'gobletOfWorkshops'
+                        name: 'Lighting Years Ahead',
+                        url: '/'
                     },
                     {
-                        name: "EC",
-                        url: 'scamandersSuitcase'
+                        name: "M.A.D. House",
+                        url: '/'
                     },
                     {
-                        name: "Mechanical",
-                        url: 'madHollows'
+                        name: "Flagship Events",
+                        url: '/'
                     },
                     {
-                        name: "Production",
-                        url: 'orderOfOhms'
+                        name: "Workshop",
+                        url: '/'
+                    },
+                    {
+                        name: "Jack a Dull Boy?",
+                        url: '/'
                     },
                 ]
             }
