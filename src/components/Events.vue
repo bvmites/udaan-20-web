@@ -2,17 +2,16 @@
     <div id="Events" class="main background">
         <canvas id="fluid" style="width: 100%; height: 100%;"></canvas>
         <div class="row h-100 m-0">
-            <div class="col-xl-6 col-md-6 my-auto">
-                <div class="departments ml-md-4 ml-2">
-                    <ul class="department m-0 p-0" v-for="department in departments" v-bind:key="department">
-                        <li class="deptName"><a class="deptEvent" @click="$router.push(department.url)">{{
-                            department.name }}</a></li>
-                    </ul>
-                </div>
+<!--            <div class="col-xl-6 col-md-6 my-auto">-->
+<!--                <div class="departments events-headers ml-md-4 ml-2">-->
+<!--                    <ul class="department m-0 p-0" v-for="department in departments" v-bind:key="department">-->
+<!--                        <li class="deptName"><a class="deptEvent" @click="$router.push(department.url)">{{-->
+<!--                            department.name }}</a></li>-->
+<!--                        <img src="" alt="">-->
+<!--                    </ul>-->
+<!--                </div>-->
 
-            </div>
-            <div class="col-xl-6 col-md-6 my-auto">
-            </div>
+<!--            </div>-->
         </div>
     </div>
 </template>
@@ -24,36 +23,49 @@
             return {
                 departments: [
                     {
-                        name: "Civil",
-                        url: 'boa'
+                        name: "The Road to Urbanization",
+                        url: '/',
+                        img: "../asstes/TheRoadtoUrbanization.png"
                     },
                     {
-                        name: "Computer",
-                        url: 'automotivePhilosophers'
+                        name: "Cyber-Clan",
+                        url: '/',
+                        img: "../asstes/Cyber-Clan.png"
                     },
                     {
-                        name: "Electronics",
-                        url: 'chamberOfCoders'
+                        name: "Wire-More to Wireless",
+                        url: '/',
+                        img: "../asstes/Wire-MoretoWireless.png"
                     },
                     {
-                        name: "Electrical",
-                        url: 'halfWavePrince'
+                        name: "Pulleying the Future",
+                        url: '/',
+                        img: "../asstes/PulleyingtheFuture.png"
                     },
                     {
-                        name: 'IT',
-                        url: 'gobletOfWorkshops'
+                        name: 'Lighting Years Ahead',
+                        url: '/',
+                        img: "../asstes/LightingYearsAhead.png"
                     },
                     {
-                        name: "EC",
-                        url: 'scamandersSuitcase'
+                        name: "M.A.D. House",
+                        url: '/',
+                        img: "../asstes/madHouse.png"
                     },
                     {
-                        name: "Mechanical",
-                        url: 'madHollows'
+                        name: "Flagship Events",
+                        url: '/',
+                        img: "../asstes/flagshipEvents.png"
                     },
                     {
-                        name: "Production",
-                        url: 'orderOfOhms'
+                        name: "Workshop",
+                        url: '/',
+                        img: "../asstes/workshop.png"
+                    },
+                    {
+                        name: "Jack a Dull Boy?",
+                        url: '/',
+                        img: "../asstes/jackADullBoy.png"
                     },
                 ]
             }
@@ -184,10 +196,22 @@
 
     li {
         color: white;
-        font-size: 30px;
+    }
+
+    .background{
+        background-image: linear-gradient(to bottom right, #10054d, #45108a)
     }
 
     .main-container {
         margin-top: 36px;
+    }
+    .events-headers{
+        font-size: 20px;
+    }
+
+    @media screen and (max-width: 786px) {
+        .udaan_logo {
+            width: 100%;
+        }
     }
 </style>
