@@ -2,17 +2,16 @@
     <div id="Events" class="main background">
         <canvas id="fluid" style="width: 100%; height: 100%;"></canvas>
         <div class="row h-100 m-0">
-            <div class="col-xl-6 col-md-6 my-auto">
-                <div class="departments ml-md-4 ml-2">
-                    <ul class="department m-0 p-0" v-for="department in departments" v-bind:key="department">
-                        <li class="deptName"><a class="deptEvent" @click="$router.push(department.url)">{{
-                            department.name }}</a></li>
-                    </ul>
-                </div>
+<!--            <div class="col-xl-6 col-md-6 my-auto">-->
+<!--                <div class="departments events-headers ml-md-4 ml-2">-->
+<!--                    <ul class="department m-0 p-0" v-for="department in departments" v-bind:key="department">-->
+<!--                        <li class="deptName"><a class="deptEvent" @click="$router.push(department.url)">{{-->
+<!--                            department.name }}</a></li>-->
+<!--                        <img src="" alt="">-->
+<!--                    </ul>-->
+<!--                </div>-->
 
-            </div>
-            <div class="col-xl-6 col-md-6 my-auto">
-            </div>
+<!--            </div>-->
         </div>
     </div>
 </template>
@@ -25,39 +24,48 @@
                 departments: [
                     {
                         name: "The Road to Urbanization",
-                        url: '/'
+                        url: '/',
+                        img: "../asstes/TheRoadtoUrbanization.png"
                     },
                     {
                         name: "Cyber-Clan",
-                        url: '/'
+                        url: '/',
+                        img: "../asstes/Cyber-Clan.png"
                     },
                     {
                         name: "Wire-More to Wireless",
-                        url: '/'
+                        url: '/',
+                        img: "../asstes/Wire-MoretoWireless.png"
                     },
                     {
                         name: "Pulleying the Future",
-                        url: '/'
+                        url: '/',
+                        img: "../asstes/PulleyingtheFuture.png"
                     },
                     {
                         name: 'Lighting Years Ahead',
-                        url: '/'
+                        url: '/',
+                        img: "../asstes/LightingYearsAhead.png"
                     },
                     {
                         name: "M.A.D. House",
-                        url: '/'
+                        url: '/',
+                        img: "../asstes/madHouse.png"
                     },
                     {
                         name: "Flagship Events",
-                        url: '/'
+                        url: '/',
+                        img: "../asstes/flagshipEvents.png"
                     },
                     {
                         name: "Workshop",
-                        url: '/'
+                        url: '/',
+                        img: "../asstes/workshop.png"
                     },
                     {
                         name: "Jack a Dull Boy?",
-                        url: '/'
+                        url: '/',
+                        img: "../asstes/jackADullBoy.png"
                     },
                 ]
             }
@@ -188,10 +196,22 @@
 
     li {
         color: white;
-        font-size: 30px;
+    }
+
+    .background{
+        background-image: linear-gradient(to bottom right, #10054d, #45108a)
     }
 
     .main-container {
         margin-top: 36px;
+    }
+    .events-headers{
+        font-size: 20px;
+    }
+
+    @media screen and (max-width: 786px) {
+        .udaan_logo {
+            width: 100%;
+        }
     }
 </style>
