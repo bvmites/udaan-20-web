@@ -10,7 +10,7 @@
                 <div class="col-lg-8 col-12">
                     <div class="row">
                         <div class="col-4">
-                            <div class="logos-container">
+                            <div class="logos-container"  @click="$router.push('civil')">
                                 <img class="mx-auto d-block event-logo" src="../assets/logos/civil.svg" alt="">
                                 <img class="stars" src="../assets/logos/stars.svg" alt="">
                                 <img class="logo-base" src="../assets/logos/base.svg" alt="">
@@ -18,7 +18,7 @@
                             </div>
                         </div>
                         <div class="col-4">
-                            <div class="logos-container">
+                            <div class="logos-container" @click="$router.push('cpit')">
                                 <img class="mx-auto d-block event-logo" src="../assets/logos/cpit.svg" alt="">
                                 <img class="stars" src="../assets/logos/stars.svg" alt="">
                                 <img class="logo-base" src="../assets/logos/base.svg" alt="">
@@ -26,7 +26,7 @@
                             </div>
                         </div>
                         <div class="col-4">
-                            <div class="logos-container">
+                            <div class="logos-container" @click="$router.push('ee')">
                                 <img class="mx-auto d-block event-logo" src="../assets/logos/ee.svg" alt="">
                                 <img class="stars" src="../assets/logos/stars.svg" alt="">
                                 <img class="logo-base" src="../assets/logos/base.svg" alt="">
@@ -34,7 +34,7 @@
                             </div>
                         </div>
                         <div class="col-4">
-                            <div class="logos-container">
+                            <div class="logos-container" @click="$router.push('ecel')">
                                 <img class="mx-auto d-block event-logo" src="../assets/logos/ecel.svg" alt="">
                                 <img class="stars" src="../assets/logos/stars.svg" alt="">
                                 <img class="logo-base" src="../assets/logos/base.svg" alt="">
@@ -42,7 +42,7 @@
                             </div>
                         </div>
                         <div class="col-4">
-                            <div class="logos-container">
+                            <div class="logos-container" @click="$router.push('mech')">
                                 <img class="mx-auto d-block event-logo" src="../assets/logos/mech.svg" alt="">
                                 <img class="stars" src="../assets/logos/stars.svg" alt="">
                                 <img class="logo-base" src="../assets/logos/base.svg" alt="">
@@ -50,7 +50,7 @@
                             </div>
                         </div>
                         <div class="col-4">
-                            <div class="logos-container">
+                            <div class="logos-container" @click="$router.push('workshop')">
                                 <img class="mx-auto d-block event-logo" src="../assets/logos/workshop.svg" alt="">
                                 <img class="stars" src="../assets/logos/stars.svg" alt="">
                                 <img class="logo-base" src="../assets/logos/base.svg" alt="">
@@ -67,7 +67,7 @@
                 <div class="col-lg-8 col-12">
                     <div class="row">
                         <div class="col-4">
-                            <div class="logos-container">
+                            <div class="logos-container" @click="$router.push('madhouse')">
                                 <img class="mx-auto d-block event-logo" src="../assets/logos/mad.svg" alt="">
                                 <img class="stars" src="../assets/logos/stars.svg" alt="">
                                 <img class="logo-base" src="../assets/logos/base.svg" alt="">
@@ -75,7 +75,7 @@
                             </div>
                         </div>
                         <div class="col-4">
-                            <div class="logos-container">
+                            <div class="logos-container" @click="$router.push('starevent')">
                                 <img class="mx-auto d-block event-logo" src="../assets/logos/starevent.svg" alt="">
                                 <img class="stars" src="../assets/logos/stars.svg" alt="">
                                 <img class="logo-base" src="../assets/logos/base.svg" alt="">
@@ -83,7 +83,7 @@
                             </div>
                         </div>
                         <div class="col-4">
-                            <div class="logos-container">
+                            <div class="logos-container" @click="$router.push('nontech')">
                                 <img class="mx-auto d-block event-logo" src="../assets/logos/nontech.svg" alt="">
                                 <img class="stars" src="../assets/logos/stars.svg" alt="">
                                 <img class="logo-base" src="../assets/logos/base.svg" alt="">
@@ -302,6 +302,10 @@
         position: absolute;
         animation-delay: 0.5s;
         animation: updown-animation 1.5s alternate infinite;
+    }
+
+    .logos-container{
+        cursor: pointer;
     }
 
     @media screen and (max-width: 960px) {
