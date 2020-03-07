@@ -4,6 +4,7 @@ import Home from "@/components/Home";
 import Events from "@/components/Events";
 import About from "@/components/About";
 import TheRoadtoUrbanization from "@/components/TheRoadtoUrbanization";
+import EventsNew from "@/components/EventsNew";
 
 Vue.use(Router)
 
@@ -18,6 +19,11 @@ export default new Router({
       path: '/events',
       name: 'Events',
       component: Events
+    },
+    {
+      path: '/eventsNew',
+      name: 'Events',
+      component: EventsNew
     },
     {
       path: '/about',

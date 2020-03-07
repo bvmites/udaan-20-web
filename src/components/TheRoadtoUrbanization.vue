@@ -1,25 +1,10 @@
 <template>
-    <transition name="slide-up">
-        <div id="Home" class="main background">
-<!--            <div id="particles-js" class="background"></div>-->
-            <div id="particles-js" class="bg"></div>
-            <canvas id="fluid" style="width: 100%; height: 100%;"/>
-            <div class="main-container mx-auto d-block">
-                <img class="udaan_logo mx-auto d-block" src="../assets/logo.png" alt="">
-                <p class="text-center date">6-8 April, 2020</p>
-            </div>
-            <div class="pullUp">
-                <a class="text-center" @click="$router.push('eventsNew')"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-            </div>
-        </div>
-    </transition>
+    <div id="TheRoadtoUrbanization" class="background"></div>
 </template>
 
 <script>
-    import 'particles.js'
-
     export default {
-        name: "Home",
+        name: "TheRoadtoUrbanization",
         mounted() {
             // window.onload = function() {
             //     Particles.init({
@@ -30,7 +15,7 @@
         },
         methods: {
             initParticles() {
-                window.particlesJS("particles-js", {
+                window.particlesJS("TheRoadtoUrbanization", {
                     "particles": {
                         "number": {
                             "value": 80,
@@ -140,48 +125,10 @@
     }
 </script>
 
-<style scoped type="text/css">
-    @import "../css/home.css";
+<style scoped>
     @import "../css/common_style.css";
 
-    canvas {
-        background-image: linear-gradient(to right, #232526, #414345, #141e30, #243b55);
-        opacity: 1;
-        animation: gradient 7s ease infinite;
-    }
-
-    #particles-js {
-        z-index: 0;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-    }
-
-    .main-container{
-        width: 100%;
-    }
-
-    .date {
-        margin-top: 16px;
-        color: white;
-        font-size: 30px;
-    }
-
-    .slide-up-leave-active {
-        animation: slide-up 0.5s ease-in;
-    }
-
-    @keyframes slide-up {
-        0% {
-            transform: translateY(0);
-            opacity: 1
-        }
-        100% {
-            transform: translateY(-100%);
-            opacity: 0
-        }
+    .background{
+        color: #0d0d0d;
     }
 </style>

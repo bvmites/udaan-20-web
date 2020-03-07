@@ -24,7 +24,6 @@ canvas {
 }
 
 canvas {
-    background: linear-gradient(to right, #232526, #414345, #141e30, #243b55);
     background-size: 400% 400%;
     animation: gradient 5s ease infinite;
     opacity: 0.3;

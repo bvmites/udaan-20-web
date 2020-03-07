@@ -1,52 +1,49 @@
 <template>
-    <div id="Events" class="main background">
+    <div id="EventsNew">
         <div id="particles-js" class="bg"></div>
-        <canvas id="fluid" style="width: 100%; height: 100%;"/>
-        <div class="events-container text-center">
-            <div class="row m-0">
-                <div class="col-12 col-lg-4 my-auto mx-auto">
-                    <p class="events-headers">Tech</p>
+        <canvas id="fluid" style="width: 100%; height: 100%;"></canvas>
+        <div class="container">
+            <div style="height: 72px"></div>
+            <p class="events-headers text-center">Tech</p>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-6">
+                    <img src="../assets/logos/civil.png" alt="">
+                    <p class="text-center header-name mt-3">Cyber-Clan</p>
                 </div>
-                <div class="col-lg-8 col-12">
-                    <div class="row">
-                        <div class="col-4">
-                            <img class="mx-auto d-block" src="../assets/TheRoadtoUrbanization.png" alt=""
-                                 @click="$router.push('TheRoadtoUrbanization')">
-                        </div>
-                        <div class="col-4">
-                            <img class="mx-auto d-block" src="../assets/Cyber-Clan.png" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="mx-auto d-block" src="../assets/Wire-MoretoWireless.png" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="mx-auto d-block" src="../assets/PulleyingtheFuture.png" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="mx-auto d-block" src="../assets/LightingYearsAhead.png" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="mx-auto d-block" src="../assets/workshop.png" alt="">
-                        </div>
-                    </div>
+                <div class="col-md-4 col-sm-6 col-6">
+                    <img src="../assets/logos/cpit.png" alt="">
+                    <p class="text-center header-name mt-3">Cyber-Clan</p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-6">
+                    <img src="../assets/logos/ecel.png" alt="">
+                    <p class="text-center header-name mt-3">Cyber-Clan</p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-6">
+                    <img src="../assets/logos/ee.png" alt="">
+                    <p class="text-center header-name mt-3">Cyber-Clan</p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-6">
+                    <img src="../assets/logos/mech.png" alt="">
+                    <p class="text-center header-name mt-3">Cyber-Clan</p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-6">
+                    <img src="../assets/logos/workshop.png" alt="">
+                    <p class="text-center header-name mt-3">Cyber-Clan</p>
                 </div>
             </div>
-            <div class="row mt-4 m-0">
-                <div class="col-12 col-lg-4 my-auto mx-auto">
-                    <p class="events-headers">Non Tech</p>
+            <p class="events-headers text-center">Non Tech</p>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-6">
+                    <img src="../assets/logos/starevent.png" alt="">
+                    <p class="text-center header-name mt-3">Cyber-Clan</p>
                 </div>
-                <div class="col-lg-8 col-12">
-                    <div class="row">
-                        <div class="col-4">
-                            <img class="mx-auto d-block" src="../assets/flagshipEvents.png" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="mx-auto d-block" src="../assets/madHouse.png" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="mx-auto d-block" src="../assets/jackAPullBoy.png" alt="">
-                        </div>
-                    </div>
+                <div class="col-md-4 col-sm-6 col-6">
+                    <img src="../assets/logos/mad.png" alt="">
+                    <p class="text-center header-name mt-3">Cyber-Clan</p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-6">
+                    <img src="../assets/logos/nontech.png" alt="">
+                    <p class="text-center header-name mt-3">Cyber-Clan</p>
                 </div>
             </div>
         </div>
@@ -55,7 +52,7 @@
 
 <script>
     export default {
-        name: "Events",
+        name: "EventsNew",
         data() {
             return {
                 departments: [
@@ -226,8 +223,9 @@
     @import "../css/events.css";
     @import "../css/common_style.css";
 
+
     canvas {
-        background-image: linear-gradient(to right,  #10054d, #471489, #2c1558, #190933);
+        background-image: linear-gradient(to right, #10054d, #45108a, #30048a, #45108a);
         opacity: 1;
         animation: gradient 7s ease infinite;
     }
@@ -239,13 +237,13 @@
         height: 100%;
         background-size: cover;
         background-position: 50% 50%;
-        background-repeat: no-repeat;
     }
 
-
-    .events-container {
-        width: 100%;
-        margin-top: 72px;
+    .bg {
+        /*background-image: linear-gradient(to bottom right, #10054d, #45108a);*/
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
     }
 
     .events-headers {
@@ -254,37 +252,18 @@
         color: white;
     }
 
-    @media screen and (max-width: 960px) {
-        img {
-            transform: scale(0.75);
-        }
-        img:hover {
-            transform: scale(.9);
-            transition: all 0.5s ease;
-        }
-    }
-
-    @media screen and (min-width: 960px) {
-        img {
-            transform: scale(0.55);
-        }
-        img:hover {
-            transform: scale(.7);
-            transition: all 0.5s ease;
-        }
-    }
-
-
     img {
+        position: relative;
+        transform: scale(0.7);
+        background: white;
+        padding: 10px;
         width: inherit;
         object-fit: contain;
-
+        border-radius: 50%;
     }
 
-    @font-face {
-        font-family: 'Neutronium';
-        src: url('../assets/font/Neutronium.ttf');
-        font-weight: normal;
-        font-style: normal;
+    .header-name {
+        color: white;
+        font-size: 24px;
     }
 </style>
