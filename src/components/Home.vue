@@ -9,7 +9,7 @@
                 <p class="text-center date">6-8 April, 2020</p>
             </div>
             <div class="pullUp">
-                <a class="text-center" @click="$router.push('eventsNew')"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <a class="text-center" @click="$router.push('events')"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
             </div>
         </div>
     </transition>

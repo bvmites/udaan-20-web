@@ -10,23 +10,52 @@
                 <div class="col-lg-8 col-12">
                     <div class="row">
                         <div class="col-4">
-                            <img class="mx-auto d-block" src="../assets/TheRoadtoUrbanization.png" alt=""
-                                 @click="$router.push('TheRoadtoUrbanization')">
+                            <div class="logos-container">
+                                <img class="mx-auto d-block event-logo" src="../assets/logos/civil.svg" alt="">
+                                <img class="stars" src="../assets/logos/stars.svg" alt="">
+                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                                <p class="text-center event-title mt-4">The Road to Urbanization</p>
+                            </div>
                         </div>
                         <div class="col-4">
-                            <img class="mx-auto d-block" src="../assets/Cyber-Clan.png" alt="">
+                            <div class="logos-container">
+                                <img class="mx-auto d-block event-logo" src="../assets/logos/cpit.svg" alt="">
+                                <img class="stars" src="../assets/logos/stars.svg" alt="">
+                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                                <p class="text-center event-title mt-4">Cyber-Clan</p>
+                            </div>
                         </div>
                         <div class="col-4">
-                            <img class="mx-auto d-block" src="../assets/Wire-MoretoWireless.png" alt="">
+                            <div class="logos-container">
+                                <img class="mx-auto d-block event-logo" src="../assets/logos/ee.svg" alt="">
+                                <img class="stars" src="../assets/logos/stars.svg" alt="">
+                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                                <p class="text-center event-title mt-4">Lightning Years Ahead</p>
+                            </div>
                         </div>
                         <div class="col-4">
-                            <img class="mx-auto d-block" src="../assets/PulleyingtheFuture.png" alt="">
+                            <div class="logos-container">
+                                <img class="mx-auto d-block event-logo" src="../assets/logos/ecel.svg" alt="">
+                                <img class="stars" src="../assets/logos/stars.svg" alt="">
+                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                                <p class="text-center event-title mt-4">Wire-More to Wireless</p>
+                            </div>
                         </div>
                         <div class="col-4">
-                            <img class="mx-auto d-block" src="../assets/LightingYearsAhead.png" alt="">
+                            <div class="logos-container">
+                                <img class="mx-auto d-block event-logo" src="../assets/logos/mech.svg" alt="">
+                                <img class="stars" src="../assets/logos/stars.svg" alt="">
+                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                                <p class="text-center event-title mt-4">Pulleying the Future</p>
+                            </div>
                         </div>
                         <div class="col-4">
-                            <img class="mx-auto d-block" src="../assets/workshop.png" alt="">
+                            <div class="logos-container">
+                                <img class="mx-auto d-block event-logo" src="../assets/logos/workshop.svg" alt="">
+                                <img class="stars" src="../assets/logos/stars.svg" alt="">
+                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                                <p class="text-center event-title mt-4">Workshop</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -38,13 +67,28 @@
                 <div class="col-lg-8 col-12">
                     <div class="row">
                         <div class="col-4">
-                            <img class="mx-auto d-block" src="../assets/flagshipEvents.png" alt="">
+                            <div class="logos-container">
+                                <img class="mx-auto d-block event-logo" src="../assets/logos/mad.svg" alt="">
+                                <img class="stars" src="../assets/logos/stars.svg" alt="">
+                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                                <p class="text-center event-title mt-4">M.A.D. House</p>
+                            </div>
                         </div>
                         <div class="col-4">
-                            <img class="mx-auto d-block" src="../assets/madHouse.png" alt="">
+                            <div class="logos-container">
+                                <img class="mx-auto d-block event-logo" src="../assets/logos/starevent.svg" alt="">
+                                <img class="stars" src="../assets/logos/stars.svg" alt="">
+                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                                <p class="text-center event-title mt-4">Flagship Events</p>
+                            </div>
                         </div>
                         <div class="col-4">
-                            <img class="mx-auto d-block" src="../assets/jackAPullBoy.png" alt="">
+                            <div class="logos-container">
+                                <img class="mx-auto d-block event-logo" src="../assets/logos/nontech.svg" alt="">
+                                <img class="stars" src="../assets/logos/stars.svg" alt="">
+                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                                <p class="text-center event-title mt-4">Jack a Dull Boy?</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -62,47 +106,38 @@
                     {
                         name: "The Road to Urbanization",
                         url: '/',
-                        img: "../assets/TheRoadtoUrbanization.png"
                     },
                     {
                         name: "Cyber-Clan",
                         url: '/',
-                        img: "../assets/Cyber-Clan.png"
                     },
                     {
                         name: "Wire-More to Wireless",
                         url: '/',
-                        img: "../assets/Wire-MoretoWireless.png"
                     },
                     {
                         name: "Pulleying the Future",
                         url: '/',
-                        img: "../assets/PulleyingtheFuture.png"
                     },
                     {
                         name: 'Lighting Years Ahead',
                         url: '/',
-                        img: "../assets/LightingYearsAhead.png"
                     },
                     {
                         name: "M.A.D. House",
                         url: '/',
-                        img: "../assets/madHouse.png"
                     },
                     {
                         name: "Flagship Events",
                         url: '/',
-                        img: "../assets/flagshipEvents.png"
                     },
                     {
                         name: "Workshop",
                         url: '/',
-                        img: "../assets/workshop.png"
                     },
                     {
                         name: "Jack a Dull Boy?",
                         url: '/',
-                        img: "../assets/jackADullBoy.png"
                     },
                 ]
             }
@@ -227,7 +262,7 @@
     @import "../css/common_style.css";
 
     canvas {
-        background-image: linear-gradient(to right,  #10054d, #471489, #2c1558, #190933);
+        background-image: linear-gradient(to right, #10054d, #471489, #2c1558, #190933);
         opacity: 1;
         animation: gradient 7s ease infinite;
     }
@@ -242,7 +277,6 @@
         background-repeat: no-repeat;
     }
 
-
     .events-container {
         width: 100%;
         margin-top: 72px;
@@ -254,28 +288,56 @@
         color: white;
     }
 
+    .event-title {
+        font-size: 4vw;
+        color: white;
+    }
+
+    .event-logo {
+        position: absolute;
+        animation: updown-animation 1.5s infinite alternate;
+    }
+
+    .stars{
+        position: absolute;
+        animation-delay: 0.5s;
+        animation: updown-animation 1.5s alternate infinite;
+    }
+
     @media screen and (max-width: 960px) {
-        img {
-            transform: scale(0.75);
+        .event-title {
+            font-size: 4vw;
+            color: white;
         }
-        img:hover {
-            transform: scale(.9);
+
+        .logos-container {
+            transform: scale(0.80);
+        }
+
+        .logos-container:hover {
+            transform: scale(0.9);
             transition: all 0.5s ease;
         }
     }
 
     @media screen and (min-width: 960px) {
-        img {
+        .event-title {
+            font-size: 2vw;
+            color: white;
+        }
+
+        .logos-container {
             transform: scale(0.55);
         }
-        img:hover {
-            transform: scale(.7);
+
+        .logos-container:hover {
+            transform: scale(.65);
             transition: all 0.5s ease;
         }
     }
 
 
-    img {
+    .logos-container {
         width: inherit;
         object-fit: contain;
 
@@ -286,5 +348,14 @@
         src: url('../assets/font/Neutronium.ttf');
         font-weight: normal;
         font-style: normal;
+    }
+
+    @keyframes updown-animation {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
     }
 </style>
