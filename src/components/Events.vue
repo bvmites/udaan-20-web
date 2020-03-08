@@ -8,7 +8,7 @@
                     <p class="events-headers">Tech</p>
                 </div>
                 <div class="col-lg-8 col-12">
-                    <div class="row">
+                    <div class="row display-flex">
                         <div class="col-4">
                             <div class="logos-container"  @click="$router.push('civil')">
                                 <img class="mx-auto d-block event-logo" src="../assets/logos/civil.svg" alt="">
@@ -65,7 +65,7 @@
                     <p class="events-headers">Non Tech</p>
                 </div>
                 <div class="col-lg-8 col-12">
-                    <div class="row">
+                    <div class="row display-flex">
                         <div class="col-4">
                             <div class="logos-container" @click="$router.push('madhouse')">
                                 <img class="mx-auto d-block event-logo" src="../assets/logos/mad.svg" alt="">
@@ -260,6 +260,15 @@
 <style scoped>
     @import "../css/events.css";
     @import "../css/common_style.css";
+    @import "../css/fontfaces.css";
+
+    .row.display-flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .row.display-flex > [class*='col-'] {
+        display: flex;
+    }
 
     canvas {
         background-image: linear-gradient(to right, #10054d, #471489, #2c1558, #190933);
@@ -289,7 +298,8 @@
     }
 
     .event-title {
-        font-size: 4vw;
+        word-break: break-word;
+        font-family: Nidsans;
         color: white;
     }
 
@@ -311,7 +321,6 @@
     @media screen and (max-width: 960px) {
         .event-title {
             font-size: 4vw;
-            color: white;
         }
 
         .logos-container {
@@ -327,7 +336,6 @@
     @media screen and (min-width: 960px) {
         .event-title {
             font-size: 2vw;
-            color: white;
         }
 
         .logos-container {
@@ -347,12 +355,7 @@
 
     }
 
-    @font-face {
-        font-family: 'Neutronium';
-        src: url('../assets/font/Neutronium.ttf');
-        font-weight: normal;
-        font-style: normal;
-    }
+
 
     @keyframes updown-animation {
         0% {
