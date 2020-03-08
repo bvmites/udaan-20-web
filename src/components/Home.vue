@@ -2,10 +2,11 @@
     <transition name="slide-up">
         <div id="Home" class="main background">
 <!--            <div id="particles-js" class="background"></div>-->
-            <canvas id="fluid" style="width: 100%; height: 100%;"></canvas>
+            <div id="particles-js" class="bg"></div>
+            <canvas id="fluid" style="width: 100%; height: 100%;"/>
             <div class="main-container mx-auto d-block">
                 <img class="udaan_logo mx-auto d-block" src="../assets/logo.png" alt="">
-                <p class="text-center date">6-8 April, 2020</p>
+                <p class="text-center date">7-9 April, 2020</p>
             </div>
             <div class="pullUp">
                 <a class="text-center" @click="$router.push('events')"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
@@ -20,16 +21,11 @@
     export default {
         name: "Home",
         mounted() {
-            // window.onload = function() {
-            //     Particles.init({
-            //         selector: '.background'
-            //     });
-            // };
             this.initParticles()
         },
         methods: {
             initParticles() {
-                window.particlesJS("Home", {
+                window.particlesJS("particles-js", {
                     "particles": {
                         "number": {
                             "value": 80,
@@ -143,8 +139,27 @@
     @import "../css/home.css";
     @import "../css/common_style.css";
 
-    .main-container{
+    canvas {
+        background-image: linear-gradient(to right, #232526, #414345, #141e30, #243b55);
+        opacity: 1;
+        animation: gradient 7s ease infinite;
+    }
+
+    #particles-js {
+        z-index: 0;
+        position: absolute;
         width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+
+    .main-container {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .date {

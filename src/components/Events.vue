@@ -1,17 +1,98 @@
 <template>
     <div id="Events" class="main background">
-        <canvas id="fluid" style="width: 100%; height: 100%;"></canvas>
-        <div class="row h-100 m-0">
-<!--            <div class="col-xl-6 col-md-6 my-auto">-->
-<!--                <div class="departments events-headers ml-md-4 ml-2">-->
-<!--                    <ul class="department m-0 p-0" v-for="department in departments" v-bind:key="department">-->
-<!--                        <li class="deptName"><a class="deptEvent" @click="$router.push(department.url)">{{-->
-<!--                            department.name }}</a></li>-->
-<!--                        <img src="" alt="">-->
-<!--                    </ul>-->
-<!--                </div>-->
-
-<!--            </div>-->
+        <div id="particles-js" class="bg"></div>
+        <canvas id="fluid" style="width: 100%; height: 100%;"/>
+        <div class="events-container text-center">
+            <div class="row m-0">
+                <div class="col-12 col-lg-4 my-auto mx-auto">
+                    <p class="events-headers">Tech</p>
+                </div>
+                <div class="col-lg-8 col-12">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="logos-container"  @click="$router.push('civil')">
+                                <img class="mx-auto d-block event-logo" src="../assets/logos/civil.svg" alt="">
+                                <img class="stars" src="../assets/logos/stars.svg" alt="">
+                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                                <p class="text-center event-title mt-4">The Road to Urbanization</p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="logos-container" @click="$router.push('cpit')">
+                                <img class="mx-auto d-block event-logo" src="../assets/logos/cpit.svg" alt="">
+                                <img class="stars" src="../assets/logos/stars.svg" alt="">
+                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                                <p class="text-center event-title mt-4">Cyber-Clan</p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="logos-container" @click="$router.push('ee')">
+                                <img class="mx-auto d-block event-logo" src="../assets/logos/ee.svg" alt="">
+                                <img class="stars" src="../assets/logos/stars.svg" alt="">
+                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                                <p class="text-center event-title mt-4">Lightning Years Ahead</p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="logos-container" @click="$router.push('ecel')">
+                                <img class="mx-auto d-block event-logo" src="../assets/logos/ecel.svg" alt="">
+                                <img class="stars" src="../assets/logos/stars.svg" alt="">
+                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                                <p class="text-center event-title mt-4">Wire-More to Wireless</p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="logos-container" @click="$router.push('mech')">
+                                <img class="mx-auto d-block event-logo" src="../assets/logos/mech.svg" alt="">
+                                <img class="stars" src="../assets/logos/stars.svg" alt="">
+                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                                <p class="text-center event-title mt-4">Pulleying the Future</p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="logos-container" @click="$router.push('workshop')">
+                                <img class="mx-auto d-block event-logo" src="../assets/logos/workshop.svg" alt="">
+                                <img class="stars" src="../assets/logos/stars.svg" alt="">
+                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                                <p class="text-center event-title mt-4">Workshop</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4 m-0">
+                <div class="col-12 col-lg-4 my-auto mx-auto">
+                    <p class="events-headers">Non Tech</p>
+                </div>
+                <div class="col-lg-8 col-12">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="logos-container" @click="$router.push('madhouse')">
+                                <img class="mx-auto d-block event-logo" src="../assets/logos/mad.svg" alt="">
+                                <img class="stars" src="../assets/logos/stars.svg" alt="">
+                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                                <p class="text-center event-title mt-4">M.A.D. House</p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="logos-container" @click="$router.push('starevent')">
+                                <img class="mx-auto d-block event-logo" src="../assets/logos/starevent.svg" alt="">
+                                <img class="stars" src="../assets/logos/stars.svg" alt="">
+                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                                <p class="text-center event-title mt-4">Flagship Events</p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="logos-container" @click="$router.push('nontech')">
+                                <img class="mx-auto d-block event-logo" src="../assets/logos/nontech.svg" alt="">
+                                <img class="stars" src="../assets/logos/stars.svg" alt="">
+                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                                <p class="text-center event-title mt-4">Jack a Dull Boy?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -25,62 +106,48 @@
                     {
                         name: "The Road to Urbanization",
                         url: '/',
-                        img: "../asstes/TheRoadtoUrbanization.png"
                     },
                     {
                         name: "Cyber-Clan",
                         url: '/',
-                        img: "../asstes/Cyber-Clan.png"
                     },
                     {
                         name: "Wire-More to Wireless",
                         url: '/',
-                        img: "../asstes/Wire-MoretoWireless.png"
                     },
                     {
                         name: "Pulleying the Future",
                         url: '/',
-                        img: "../asstes/PulleyingtheFuture.png"
                     },
                     {
                         name: 'Lighting Years Ahead',
                         url: '/',
-                        img: "../asstes/LightingYearsAhead.png"
                     },
                     {
                         name: "M.A.D. House",
                         url: '/',
-                        img: "../asstes/madHouse.png"
                     },
                     {
                         name: "Flagship Events",
                         url: '/',
-                        img: "../asstes/flagshipEvents.png"
                     },
                     {
                         name: "Workshop",
                         url: '/',
-                        img: "../asstes/workshop.png"
                     },
                     {
                         name: "Jack a Dull Boy?",
                         url: '/',
-                        img: "../asstes/jackADullBoy.png"
                     },
                 ]
             }
         },
         mounted() {
-            // window.onload = function() {
-            //     Particles.init({
-            //         selector: '.background'
-            //     });
-            // };
             this.initParticles()
         },
         methods: {
             initParticles() {
-                window.particlesJS("Events", {
+                window.particlesJS("particles-js", {
                     "particles": {
                         "number": {
                             "value": 80,
@@ -90,7 +157,7 @@
                             }
                         },
                         "color": {
-                            "value": "#919191"
+                            "value": "#cccccc"
                         },
                         "shape": {
                             "type": "circle",
@@ -125,7 +192,7 @@
                         "line_linked": {
                             "enable": true,
                             "distance": 100,
-                            "color": "#919191",
+                            "color": "#CCCCCC",
                             "opacity": 0.4,
                             "width": 1
                         },
@@ -194,24 +261,114 @@
     @import "../css/events.css";
     @import "../css/common_style.css";
 
-    li {
+    canvas {
+        background-image: linear-gradient(to right, #10054d, #471489, #2c1558, #190933);
+        opacity: 1;
+        animation: gradient 7s ease infinite;
+    }
+
+    #particles-js {
+        z-index: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+
+    .events-container {
+        width: 100%;
+        margin-top: 72px;
+    }
+
+    .events-headers {
+        font-family: Neutronium;
+        font-size: 400%;
         color: white;
     }
 
-    .background{
-        background-image: linear-gradient(to bottom right, #10054d, #45108a)
+    .event-title {
+        font-size: 4vw;
+        color: white;
     }
 
-    .main-container {
-        margin-top: 36px;
-    }
-    .events-headers{
-        font-size: 20px;
+    .event-logo {
+        position: absolute;
+        animation: updown-animation 1.5s ease 1.5s infinite alternate, born-animation 1.5s ease 1;
     }
 
-    @media screen and (max-width: 786px) {
-        .udaan_logo {
-            width: 100%;
+    .stars{
+        position: absolute;
+        animation-delay: 0.5s;
+        animation: updown-animation 1.5s 1.5s alternate infinite;
+    }
+
+    .logos-container{
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 960px) {
+        .event-title {
+            font-size: 4vw;
+            color: white;
+        }
+
+        .logos-container {
+            transform: scale(0.80);
+        }
+
+        .logos-container:hover {
+            transform: scale(0.9);
+            transition: all 0.5s ease;
+        }
+    }
+
+    @media screen and (min-width: 960px) {
+        .event-title {
+            font-size: 2vw;
+            color: white;
+        }
+
+        .logos-container {
+            transform: scale(0.55);
+        }
+
+        .logos-container:hover {
+            transform: scale(.65);
+            transition: all 0.5s ease;
+        }
+    }
+
+
+    .logos-container {
+        width: inherit;
+        object-fit: contain;
+
+    }
+
+    @font-face {
+        font-family: 'Neutronium';
+        src: url('../assets/font/Neutronium.ttf');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @keyframes updown-animation {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes born-animation {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
         }
     }
 </style>

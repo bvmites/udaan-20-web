@@ -37,6 +37,7 @@ nav ul li:hover {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    z-index: 100;
 }
 
 .nav-wrapper{
@@ -112,6 +113,7 @@ nav ul li a {
         z-index: -1;
         background: #000000;
         opacity: 0;
+        visibility: hidden;
         transition: all 0.3s ease;
     }
 
@@ -157,6 +159,7 @@ nav ul li a {
     .nav-wrapper ul li a {
         padding: 10px 30px;
         opacity: 0;
+        visibility: hidden;
         color: #fff;
         font-size: 14px;
         font-weight: 600;
@@ -224,10 +227,12 @@ nav ul li a {
 #nav:checked ~ .nav-wrapper {
     z-index: 9990;
     opacity: 1;
+    visibility: visible;
 }
 
 #nav:checked ~ .nav-wrapper ul li a {
     opacity: 1;
+    visibility: visible;
     transform: translateX(0);
 }
 

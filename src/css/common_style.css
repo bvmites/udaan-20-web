@@ -1,13 +1,6 @@
-.main-container {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
 .background {
     display: block;
     position: absolute;
-    background: #0d0d0d;
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -25,7 +18,6 @@ canvas {
 }
 
 canvas {
-    background: linear-gradient(to right, #232526, #414345, #141e30, #243b55);
     background-size: 400% 400%;
     animation: gradient 5s ease infinite;
     opacity: 0.3;
