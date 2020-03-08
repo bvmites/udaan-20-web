@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "Riviera";
+    src: url("../assets/font/Riviera.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quantum';
+    src: url('../assets/font/Quantum.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neutronium';
+    src: url('../assets/font/Neutronium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nidsans';
+    src: url('../assets/font/Nidsans.ttf');
+    font-weight: normal;
+    font-style: normal;
+}

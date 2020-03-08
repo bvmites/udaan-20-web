@@ -1,9 +1,12 @@
 <template>
     <div id="TheRoadtoUrbanization" class="background">
+        <div>
+            <img class="bg-asset" src="../assets/backgrounds/civil-bg.svg" alt="">
+        </div>
         <div class="main-container">
-            <p class="text-center heading">The Road to Urbanization</p>
-            <div class="events container">
-                <p class="event text-center" v-for="event in deptEvents" @click="eventsDetail = event" v-bind:key="event">{{event.eventName}}</p>
+            <div class="events">
+                <p class="heading">The Road to Urbanization</p>
+                <p class="event" v-for="event in deptEvents" @click="eventsDetail = event" v-bind:key="event">{{event.eventName}}</p>
             </div>
         </div>
     </div>
@@ -37,7 +40,7 @@
 
 <style scoped>
     .main-container {
-        margin-top: 80px;
+        margin-top: 200px;
     }
 
     .background {
@@ -46,6 +49,11 @@
 
     .heading{
         color: white;
+        font-size: 32px;
+    }
+
+    .events{
+        margin-left: 8%;
     }
 
     .event{
@@ -54,24 +62,47 @@
         color: white;
     }
 
-    .event:hover{
-        transition: all 0.5s ease;
-        transform: scale(1.2);
+    .bg-asset{
+        position: fixed;
+        z-index: -1;
+        right: 0;
+        width: 80%;
+        bottom: -10px;
+        object-fit: fill;
+        opacity: 0.5;
     }
 
     @media screen and (max-width: 960px) {
-        .heading{
-            font-size: 6vw;
-        }
+        /*.heading{*/
+        /*    font-size: 6vw;*/
+        /*}*/
 
         .events{
             margin-top: 40px;
         }
+        .bg-asset{
+            right: 0;
+            width: 90%;
+        }
     }
 
     @media screen and (min-width: 960px) {
-        .heading{
-            font-size: 2vw;
+        /*.heading{*/
+        /*    font-size: 2vw;*/
+        /*}*/
+    }
+
+    @media screen and (max-width: 768px) {
+        .bg-asset{
+            right: 0;
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 556px) {
+        .bg-asset{
+            left: 0;
+            bottom: -10px;
+            width: 150%;
         }
     }
 </style>

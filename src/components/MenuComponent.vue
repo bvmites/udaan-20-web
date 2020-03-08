@@ -71,6 +71,7 @@
 
 <style scoped>
     @import "../css/menu.css";
+    @import "../css/fontfaces.css";
 </style>
 
 <style type="text/css">
@@ -86,12 +87,15 @@
     body {
         margin: 0;
         padding: 0;
-        /*font-family: Neutronium;*/
         font-weight: 400;
     }
 
     a:hover{
         color: white;
+    }
+
+    nav{
+        font-family: Riviera;
     }
 
 </style>
