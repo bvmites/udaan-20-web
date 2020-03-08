@@ -6,7 +6,7 @@
             <canvas id="fluid" style="width: 100%; height: 100%;"/>
             <div class="main-container mx-auto d-block">
                 <img class="udaan_logo mx-auto d-block" src="../assets/logo.png" alt="">
-                <p class="text-center date">6-8 April, 2020</p>
+                <p class="text-center date">7-9 April, 2020</p>
             </div>
             <div class="pullUp">
                 <a class="text-center" @click="$router.push('events')"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
@@ -21,11 +21,6 @@
     export default {
         name: "Home",
         mounted() {
-            // window.onload = function() {
-            //     Particles.init({
-            //         selector: '.background'
-            //     });
-            // };
             this.initParticles()
         },
         methods: {
@@ -160,8 +155,11 @@
         background-repeat: no-repeat;
     }
 
-    .main-container{
+    .main-container {
         width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .date {

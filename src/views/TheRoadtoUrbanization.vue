@@ -1,134 +1,77 @@
 <template>
-    <div id="TheRoadtoUrbanization" class="background"></div>
+    <div id="TheRoadtoUrbanization" class="background">
+        <div class="main-container">
+            <p class="text-center heading">The Road to Urbanization</p>
+            <div class="events container">
+                <p class="event text-center" v-for="event in deptEvents" @click="eventsDetail = event" v-bind:key="event">{{event.eventName}}</p>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
+    import events from '../events'
+
     export default {
         name: "TheRoadtoUrbanization",
+        data() {
+            return {
+                events,
+                deptEvents: [],
+                eventsDetail: null,
+                dept: {
+                    name: "The Road to Urbanization"
+                }
+            }
+        },
+        created(){
+            let self = this;
+            self.deptEvents = events.tech.ce;
+        },
         mounted() {
-            // window.onload = function() {
-            //     Particles.init({
-            //         selector: '.background'
-            //     });
-            // };
-            this.initParticles()
         },
         methods: {
-            initParticles() {
-                window.particlesJS("TheRoadtoUrbanization", {
-                    "particles": {
-                        "number": {
-                            "value": 80,
-                            "density": {
-                                "enable": true,
-                                "value_area": 700
-                            }
-                        },
-                        "color": {
-                            "value": "#919191"
-                        },
-                        "shape": {
-                            "type": "circle",
-                            "stroke": {
-                                "width": 0,
-                                "color": "#000000"
-                            },
-                            "polygon": {
-                                "nb_sides": 5
-                            },
-                        },
-                        "opacity": {
-                            "value": 0.5,
-                            "random": false,
-                            "anim": {
-                                "enable": false,
-                                "speed": 1,
-                                "opacity_min": 0.1,
-                                "sync": false
-                            }
-                        },
-                        "size": {
-                            "value": 3,
-                            "random": true,
-                            "anim": {
-                                "enable": false,
-                                "speed": 40,
-                                "size_min": 0.1,
-                                "sync": false
-                            }
-                        },
-                        "line_linked": {
-                            "enable": true,
-                            "distance": 100,
-                            "color": "#919191",
-                            "opacity": 0.4,
-                            "width": 1
-                        },
-                        "move": {
-                            "enable": true,
-                            "speed": 4,
-                            "direction": "none",
-                            "random": false,
-                            "straight": false,
-                            "out_mode": "out",
-                            "bounce": false,
-                            "attract": {
-                                "enable": false,
-                                "rotateX": 600,
-                                "rotateY": 1200
-                            }
-                        }
-                    },
-                    "interactivity": {
-                        "detect_on": "canvas",
-                        "events": {
-                            "onhover": {
-                                "enable": true,
-                                "mode": "grab"
-                            },
-                            "onclick": {
-                                "enable": true,
-                                "mode": "push"
-                            },
-                            "resize": true
-                        },
-                        "modes": {
-                            "grab": {
-                                "distance": 140,
-                                "line_linked": {
-                                    "opacity": 1
-                                }
-                            },
-                            "bubble": {
-                                "distance": 400,
-                                "size": 40,
-                                "duration": 2,
-                                "opacity": 8,
-                                "speed": 3
-                            },
-                            "repulse": {
-                                "distance": 200,
-                                "duration": 0.4
-                            },
-                            "push": {
-                                "particles_nb": 4
-                            },
-                            "remove": {
-                                "particles_nb": 2
-                            }
-                        }
-                    },
-                    "retina_detect": true
-                })
-            }
         }
     }
 </script>
 
 <style scoped>
-    @import "../css/common_style.css";
+    .main-container {
+        margin-top: 80px;
+    }
 
-    .background{
-        color: #0d0d0d;
+    .background {
+        background-color: #0d0d0d;
+    }
+
+    .heading{
+        color: white;
+    }
+
+    .event{
+        margin: 8px;
+        font-size: 20px;
+        color: white;
+    }
+
+    .event:hover{
+        transition: all 0.5s ease;
+        transform: scale(1.2);
+    }
+
+    @media screen and (max-width: 960px) {
+        .heading{
+            font-size: 6vw;
+        }
+
+        .events{
+            margin-top: 40px;
+        }
+    }
+
+    @media screen and (min-width: 960px) {
+        .heading{
+            font-size: 2vw;
+        }
     }
 </style>

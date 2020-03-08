@@ -295,13 +295,13 @@
 
     .event-logo {
         position: absolute;
-        animation: updown-animation 1.5s infinite alternate;
+        animation: updown-animation 1.5s ease 1.5s infinite alternate, born-animation 1.5s ease 1;
     }
 
     .stars{
         position: absolute;
         animation-delay: 0.5s;
-        animation: updown-animation 1.5s alternate infinite;
+        animation: updown-animation 1.5s 1.5s alternate infinite;
     }
 
     .logos-container{
@@ -360,6 +360,15 @@
         }
         100% {
             transform: translateY(-10px);
+        }
+    }
+
+    @keyframes born-animation {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
         }
     }
 </style>
