@@ -34,3 +34,9 @@ canvas {
         background-position: 0 50%;
     }
 }
+
+.heading {
+    font-family: Oxanium-Bold;
+    color: white;
+    font-size: 32px;
+}

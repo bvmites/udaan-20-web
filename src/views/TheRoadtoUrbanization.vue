@@ -73,6 +73,7 @@
 
 <style scoped type="text/css">
     @import "../css/eventDetails.css";
+    @import "../css/common_style.css";
 
     .main-container {
         margin-top: 200px;
@@ -80,11 +81,6 @@
 
     .background {
         background-color: #121920;
-    }
-
-    .heading {
-        color: white;
-        font-size: 32px;
     }
 
     .events {

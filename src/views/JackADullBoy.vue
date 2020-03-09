@@ -95,14 +95,6 @@
         background: #0d0d0d;
     }
 
-    .heading {
-        color: white;
-        font-size: 32px;
-    }
-
-    .events {
-        /*margin-left: 8%;*/
-    }
 
     .event {
         padding: 8px;

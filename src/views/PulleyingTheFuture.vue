@@ -72,6 +72,7 @@
 
 <style scoped>
     @import "../css/eventDetails.css";
+    @import "../css/common_style.css";
 
     .main-container {
         margin-top: 200px;
@@ -81,10 +82,6 @@
         background-image: linear-gradient(to bottom right, #088ba1, #003a62);
     }
 
-    .heading {
-        color: white;
-        font-size: 32px;
-    }
 
     .events {
         margin-left: 12%;
