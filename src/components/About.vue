@@ -7,7 +7,8 @@
                 <div class="col-md-6 col-12">
                     <div class="about-udaan">
                         <p class="text-center title">About Udaan</p>
-                        <p class="about-text">UDAAN is not just an annual function but a celebration of what the students here are and
+                        <p class="about-text">UDAAN is not just an annual function but a celebration of what the
+                            students here are and
                             about their aspirations and dreams. As the name defines it is a joint effort by each one
                             to help provide the flight and wings to the bright ideas of young minds.</p>
                     </div>
@@ -17,17 +18,23 @@
                         <p class="text-center title">About BVM</p>
                         <p class="about-text">
                             We Birla Vishvakarma Mahavidyalaya(BVM) family take the pride of being the first engineering
-                            college in the state of Gujarat, founded in 1948 and inaugurated by last Viceroy of India "Lord Mountbatten".
+                            college in the state of Gujarat, founded in 1948 and inaugurated by last Viceroy of India
+                            "Lord Mountbatten".
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="social-handle row">
-                <p class="text-center col-12">Follow us on</p>
-                <div class="col-12">
-                    <a href="https://www.youtube.com/channel/UCnqRgS6O0MGF8sTYb_fHjWA"><i class="fa fa-youtube-play" aria-hidden="true"/></a>
-                    <a href="https://www.instagram.com/teamudaan/"><i class="fa fa-instagram" aria-hidden="true"/></a>
-                    <a href="https://www.facebook.com/teamudaan19/"><i class="fa fa-facebook-square" aria-hidden="true"/></a>
+            <div class="social-handle">
+                <div class="row p-2">
+                    <p class="text-center col-12">Follow us on</p>
+                    <div class="col-12">
+                        <a href="https://www.youtube.com/channel/UCnqRgS6O0MGF8sTYb_fHjWA"><i class="fa fa-youtube-play"
+                                                                                              aria-hidden="true"/></a>
+                        <a href="https://www.instagram.com/teamudaan/"><i class="fa fa-instagram"
+                                                                          aria-hidden="true"/></a>
+                        <a href="https://www.facebook.com/teamudaan19/"><i class="fa fa-facebook-square"
+                                                                           aria-hidden="true"/></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -154,8 +161,9 @@
 
 <style scoped>
     @import "../css/common_style.css";
+
     canvas {
-        background-image: linear-gradient(to right, #10054d, #471489, #2c1558, #190933);
+        background-image: linear-gradient(to right, #232526, #414345, #141e30, #243b55);
         opacity: 1;
         animation: gradient 7s ease infinite;
     }
@@ -175,14 +183,14 @@
         color: white;
     }
 
-    .title{
+    .title {
         font-family: Oxanium-Bold;
         font-weight: 900;
         font-size: 24px;
         margin: 0;
     }
 
-    .about-text{
+    .about-text {
         font-family: TitilliumWeb;
         letter-spacing: 1px;
         text-align: justify;
@@ -193,18 +201,22 @@
     }
 
     .social-handle {
-        border-radius: 10px;
-        border: 2px white solid;
-        padding: 10px;
+        padding: 10px 20px;
         text-align: center;
         margin-bottom: 20px;
     }
 
-    .social-handle a{
+    .social-handle .row {
+        border-radius: 10px;
+        border: 2px white solid;
+    }
+
+    .social-handle a {
         font-size: 36px;
         margin: 10px;
     }
-    .social-handle p{
+
+    .social-handle p {
         text-decoration: underline;
         font-size: 20px;
         font-family: Oxanium-Bold;

@@ -1,7 +1,7 @@
 <template>
     <div id="Cart" class="background">
         <div class="container">
-            <p class="text-center">Cart</p>
+            <p class="text-center">This feature is coming soon!</p>
         </div>
     </div>
 </template>
