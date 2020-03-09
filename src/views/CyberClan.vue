@@ -1,9 +1,12 @@
 <template>
     <div id="CyberClan" class="background">
+        <div>
+            <img class="bg-asset" src="../assets/backgrounds/cpit-bg.svg" alt="">
+        </div>
         <div class="main-container">
-            <p class="text-center heading">Cyber-Clan</p>
-            <div class="events container">
-                <p class="event text-center" v-for="event in deptEvents" @click="eventsDetail = event" v-bind:key="event">{{event.eventName}}</p>
+            <div class="events">
+                <p class="heading">Cyber-Clan</p>
+                <p class="event" v-for="event in deptEvents" @click="eventsDetail = event" v-bind:key="event">{{event.eventName}}</p>
             </div>
         </div>
     </div>
@@ -37,15 +40,20 @@
 
 <style scoped>
     .main-container {
-        margin-top: 80px;
+        margin-top: 200px;
     }
 
     .background {
-        background-color: #0d0d0d;
+        background-image: linear-gradient(to bottom,#13719e,#10045a);
     }
 
     .heading{
         color: white;
+        font-size: 32px;
+    }
+
+    .events{
+        margin-left: 8%;
     }
 
     .event{
@@ -54,20 +62,50 @@
         color: white;
     }
 
-    .event:hover{
-        transition: all 0.5s ease;
-        transform: scale(1.2);
+    .bg-asset{
+        position: fixed;
+        z-index: -1;
+        right: 50px;
+        width: 70%;
+        bottom: 30px;
+        object-fit: fill;
+        opacity: 0.8;
     }
 
     @media screen and (max-width: 960px) {
-        .heading{
-            font-size: 4vw;
+        .events{
+            margin-top: 40px;
+        }
+        .bg-asset{
+            width: 70%;
+        }
+    }
+    @media screen and (min-width: 1295px) {
+        .bg-asset{
+            width: 50%;
         }
     }
 
     @media screen and (min-width: 960px) {
-        .heading{
-            font-size: 2vw;
+        /*.heading{*/
+        /*    font-size: 2vw;*/
+        /*}*/
+    }
+
+    @media screen and (max-width: 768px) {
+        .bg-asset{
+            right: 0;
+            width: 80%;
+        }
+    }
+    @media screen and (max-width: 556px) {
+        .main-container{
+            margin-top: 150px;
+        }
+        .bg-asset{
+            left: 24px;
+            bottom: 30px;
+            width: 110%;
         }
     }
 </style>
