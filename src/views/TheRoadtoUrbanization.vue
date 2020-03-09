@@ -71,7 +71,7 @@
     }
 </script>
 
-<style scoped>
+<style scoped type="text/css">
     @import "../css/eventDetails.css";
 
     .main-container {
@@ -95,6 +95,7 @@
         margin: 8px;
         font-size: 20px;
         color: white;
+        cursor: pointer;
     }
 
     .bg-asset {
@@ -105,6 +106,7 @@
         bottom: -10px;
         object-fit: fill;
         opacity: 0.6;
+        animation: fade-in 3s 1 ease;
     }
 
     @media screen and (max-width: 960px) {
@@ -118,12 +120,6 @@
         }
     }
 
-    @media screen and (min-width: 960px) {
-        /*.heading{*/
-        /*    font-size: 2vw;*/
-        /*}*/
-    }
-
     @media screen and (max-width: 768px) {
         .bg-asset {
             right: 0;
@@ -133,12 +129,37 @@
 
     @media screen and (max-width: 556px) {
         .bg-asset {
-            left: -30px;
-            bottom: -10px;
-            width: 150%;
+            left: -85px;
+            bottom: -5px;
+            width: 170%;
         }
     }
 
-
+    @keyframes fade-in {
+        0%{
+            opacity: 0;
+        }
+        10%{
+            opacity: 0.8;
+        }
+        20%{
+            opacity: 0;
+        }
+        30%{
+            opacity: .3;
+        }
+        35%{
+            opacity: 0;
+        }
+        40%{
+            opacity: .6;
+        }
+        60%{
+            opacity: 0;
+        }
+        80%{
+            opacity: 0.6;
+        }
+    }
 
 </style>

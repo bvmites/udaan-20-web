@@ -9,6 +9,38 @@
                 <p class="event" v-for="event in deptEvents" @click="eventsDetail = event" v-bind:key="event">{{event.eventName}}</p>
             </div>
         </div>
+
+        <transition name="fade">
+            <div class="eventDescription" v-if="eventsDetail">
+                <div class="eventName">{{ eventsDetail.eventName }}</div>
+                <div class="tagline">{{ eventsDetail.tagline }}</div>
+                <div class="event-content hide-native-scrollbar">
+                    <div class="rounds">
+                        <div class="round" v-for="(round, index) in eventsDetail.rounds" v-bind:key="index">
+                            <span class="roundIndice">Round {{index + 1}} : </span>
+                            <p class="round-text">{{ round}}</p>
+                        </div>
+                    </div>
+                    <div class="entryFee">Entry Fee: {{ eventsDetail.entryFee }}</div>
+                    <div class="entryFee">Team Size: {{ eventsDetail.teamSize}}</div>
+                    <div class="managers">
+                        <div class="contact-text">Contact</div>
+                        <div class="manager" v-for="manager in eventsDetail.managers" v-bind:key="manager">
+                            <div class="name">{{manager.name}}</div>
+                            <div class="contact">{{manager.phone}}</div>
+                        </div>
+                    </div>
+                    <div class="notes" v-if="eventsDetail.notes">
+                        Notes:
+                        <pre>{{eventsDetail.notes}}</pre>
+                    </div>
+                </div>
+                <div class="bottom-part">
+                    <div class="cart btn btn-success">Add to Cart</div>
+                    <div class="back btn btn-primary" @click="eventsDetail = null">Back</div>
+                </div>
+            </div>
+        </transition>
     </div>
 </template>
 
@@ -38,7 +70,9 @@
     }
 </script>
 
-<style scoped>
+<style scoped type="text/css">
+    @import "../css/eventDetails.css";
+
     .main-container {
         margin-top: 200px;
     }
@@ -60,6 +94,7 @@
         margin: 8px;
         font-size: 20px;
         color: white;
+        cursor: pointer ;
     }
 
     .bg-asset{
@@ -70,6 +105,7 @@
         bottom: 30px;
         object-fit: fill;
         opacity: 0.8;
+        animation: fade-in 1.5s 1 ease;
     }
 
     @media screen and (max-width: 960px) {
@@ -103,9 +139,16 @@
             margin-top: 150px;
         }
         .bg-asset{
-            left: 24px;
+            right: -80px;
             bottom: 30px;
             width: 110%;
+        }
+    }
+
+    @keyframes fade-in {
+        0%{
+            opacity: 0;
+            right: -150px;
         }
     }
 </style>
