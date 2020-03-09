@@ -163,6 +163,7 @@
     }
 
     .date {
+        font-family: NovaSquare;
         margin-top: 16px;
         color: white;
         font-size: 30px;

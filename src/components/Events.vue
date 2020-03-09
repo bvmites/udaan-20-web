@@ -299,7 +299,7 @@
 
     .event-title {
         word-break: break-word;
-        font-family: Nidsans;
+        font-family: NovaSquare;
         color: white;
     }
 

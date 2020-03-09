@@ -66,13 +66,18 @@
             self.deptEvents = events.tech.ce;
         },
         mounted() {
+            let t2 = new this.$gsap.TimelineMax();
+            t2.staggerFrom('.event', .7, {
+                autoAlpha: 0
+            }, 0.3);
         },
         methods: {}
     }
 </script>
 
-<style scoped>
+<style scoped type="text/css">
     @import "../css/eventDetails.css";
+    @import "../css/common_style.css";
 
     .main-container {
         margin-top: 200px;
@@ -82,19 +87,8 @@
         background-color: #121920;
     }
 
-    .heading {
-        color: white;
-        font-size: 32px;
-    }
-
     .events {
         margin-left: 8%;
-    }
-
-    .event {
-        margin: 8px;
-        font-size: 20px;
-        color: white;
     }
 
     .bg-asset {
@@ -105,6 +99,7 @@
         bottom: -10px;
         object-fit: fill;
         opacity: 0.6;
+        animation: fade-in 3s 1 ease;
     }
 
     @media screen and (max-width: 960px) {
@@ -118,12 +113,6 @@
         }
     }
 
-    @media screen and (min-width: 960px) {
-        /*.heading{*/
-        /*    font-size: 2vw;*/
-        /*}*/
-    }
-
     @media screen and (max-width: 768px) {
         .bg-asset {
             right: 0;
@@ -132,13 +121,41 @@
     }
 
     @media screen and (max-width: 556px) {
+        .main-container{
+            margin-top: 150px;
+        }
         .bg-asset {
-            left: -30px;
-            bottom: -10px;
-            width: 150%;
+            left: -85px;
+            bottom: -5px;
+            width: 170%;
         }
     }
 
-
+    @keyframes fade-in {
+        0%{
+            opacity: 0;
+        }
+        10%{
+            opacity: 0.8;
+        }
+        20%{
+            opacity: 0;
+        }
+        30%{
+            opacity: .3;
+        }
+        35%{
+            opacity: 0;
+        }
+        40%{
+            opacity: .6;
+        }
+        60%{
+            opacity: 0;
+        }
+        80%{
+            opacity: 0.6;
+        }
+    }
 
 </style>

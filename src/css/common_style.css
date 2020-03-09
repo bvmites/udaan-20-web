@@ -34,3 +34,24 @@ canvas {
         background-position: 0 50%;
     }
 }
+
+.heading {
+    font-family: Oxanium-Bold;
+    color: white;
+    font-size: 32px;
+    animation: glow 1s infinite alternate;
+}
+
+.event {
+    font-family: NovaSquare;
+    margin: 8px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+@keyframes glow {
+    50% {
+        text-shadow: 0 0 10px #ffffff;
+    }
+}
