@@ -3,7 +3,8 @@
         <div class="main-container">
             <div class="events">
                 <p class="heading">Lightning Years Ahead</p>
-                <p class="event" v-for="event in deptEvents" @click="eventsDetail = event" v-bind:key="event">{{event.eventName}}</p>
+                <p class="event" v-for="event in deptEvents" @click="eventsDetail = event" v-bind:key="event">
+                    {{event.eventName}}</p>
             </div>
         </div>
 
@@ -50,24 +51,34 @@
             return {
                 events,
                 deptEvents: [],
-                eventsDetail: null,
+                eventsDetail: {},
                 dept: {
                     name: "Lightning Years Ahead"
                 }
             }
         },
-        created(){
+        created() {
             let self = this;
             self.deptEvents = events.tech.ee;
         },
         mounted() {
             let t2 = new this.$gsap.TimelineMax();
             t2.staggerFrom('.event', .5, {
-                autoAlpha:0,
-                rotation:-20,
+                autoAlpha: 0,
+                rotation: -20,
             }, 0.1);
         },
-        methods: {
+        methods: {},
+        watch: {
+            eventsDetail: {
+                handler: function (val) {
+                    console.log("ad");
+                    if (val.eventName === "Electronics Premiere League") {
+                        document.querySelector('eventName').style.fontSize = "28px"
+                    }
+                },
+                deep: true
+            }
         }
     }
 </script>
@@ -84,11 +95,11 @@
         background: #0d0d0d;
     }
 
-    .events{
+    .events {
         margin-left: 8%;
     }
 
-    .bg-asset{
+    .bg-asset {
         position: fixed;
         z-index: -1;
         right: 50px;
@@ -99,30 +110,34 @@
     }
 
     @media screen and (max-width: 960px) {
-        .events{
+        .events {
             margin-top: 40px;
         }
-        .bg-asset{
+
+        .bg-asset {
             width: 70%;
         }
     }
+
     @media screen and (min-width: 1295px) {
-        .bg-asset{
+        .bg-asset {
             width: 50%;
         }
     }
 
     @media screen and (max-width: 768px) {
-        .bg-asset{
+        .bg-asset {
             right: 0;
             width: 80%;
         }
     }
+
     @media screen and (max-width: 556px) {
-        .main-container{
+        .main-container {
             margin-top: 150px;
         }
-        .bg-asset{
+
+        .bg-asset {
             left: 24px;
             bottom: 30px;
             width: 110%;
