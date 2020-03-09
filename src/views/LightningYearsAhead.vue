@@ -61,6 +61,11 @@
             self.deptEvents = events.tech.ee;
         },
         mounted() {
+            let t2 = new this.$gsap.TimelineMax();
+            t2.staggerFrom('.event', .5, {
+                autoAlpha:0,
+                rotation:-20,
+            }, 0.1);
         },
         methods: {
         }
@@ -81,13 +86,6 @@
 
     .events{
         margin-left: 8%;
-    }
-
-    .event{
-        margin: 8px;
-        font-size: 20px;
-        color: white;
-        cursor: pointer ;
     }
 
     .bg-asset{

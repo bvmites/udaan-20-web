@@ -3,7 +3,8 @@
         <div class="main-container">
             <div class="events">
                 <p class="heading">M.A.D. House</p>
-                <p class="event" v-for="event in deptEvents" @click="eventsDetail = event" v-bind:key="event">{{event.eventName}}</p>
+                <p class="event" v-for="event in deptEvents" @click="eventsDetail = event" v-bind:key="event">
+                    {{event.eventName}}</p>
             </div>
         </div>
 
@@ -56,14 +57,19 @@
                 }
             }
         },
-        created(){
+        created() {
             let self = this;
             self.deptEvents = events.cultural;
         },
         mounted() {
+            let t2 = new this.$gsap.TimelineMax();
+            t2.staggerFrom('.event', .7, {
+                x: -36,
+                y: -36,
+                autoAlpha: 0,
+            }, 0.1);
         },
-        methods: {
-        }
+        methods: {}
     }
 </script>
 
@@ -80,18 +86,11 @@
     }
 
 
-    .events{
+    .events {
         margin-left: 8%;
     }
 
-    .event{
-        margin: 8px;
-        font-size: 20px;
-        color: white;
-        cursor: pointer ;
-    }
-
-    .bg-asset{
+    .bg-asset {
         position: fixed;
         z-index: -1;
         right: 50px;
@@ -102,30 +101,34 @@
     }
 
     @media screen and (max-width: 960px) {
-        .events{
+        .events {
             margin-top: 40px;
         }
-        .bg-asset{
+
+        .bg-asset {
             width: 70%;
         }
     }
+
     @media screen and (min-width: 1295px) {
-        .bg-asset{
+        .bg-asset {
             width: 50%;
         }
     }
 
     @media screen and (max-width: 768px) {
-        .bg-asset{
+        .bg-asset {
             right: 0;
             width: 80%;
         }
     }
+
     @media screen and (max-width: 556px) {
-        .main-container{
+        .main-container {
             margin-top: 150px;
         }
-        .bg-asset{
+
+        .bg-asset {
             left: 24px;
             bottom: 30px;
             width: 110%;

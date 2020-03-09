@@ -76,6 +76,11 @@
             self.deptEvents = events["non-tech"];
         },
         mounted() {
+            let t2 = new this.$gsap.TimelineMax();
+            t2.staggerFrom('.event', 0.4, {
+                rotationX: 90,
+                autoAlpha:0
+            }, 0.1);
         },
         methods: {}
     }
@@ -95,14 +100,6 @@
         background: #0d0d0d;
     }
 
-
-    .event {
-        padding: 8px;
-        font-size: 20px;
-        color: white;
-        cursor: pointer;
-    }
-
     .bg-asset {
         position: fixed;
         z-index: -1;
@@ -111,6 +108,11 @@
         bottom: 30px;
         object-fit: fill;
         opacity: 0.8;
+    }
+
+    .event{
+        margin: 0;
+        padding: 4px;
     }
 
     @media screen and (max-width: 960px) {

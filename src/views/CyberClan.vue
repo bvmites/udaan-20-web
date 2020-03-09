@@ -64,6 +64,11 @@
             self.deptEvents = events.tech.cp;
         },
         mounted() {
+            let t2 = new this.$gsap.TimelineMax();
+            t2.staggerFrom('.event', 0.5, {
+                x: -200,
+                autoAlpha: 0
+            }, 0.2);
         },
         methods: {
         }
@@ -84,13 +89,6 @@
 
     .events{
         margin-left: 8%;
-    }
-
-    .event{
-        margin: 8px;
-        font-size: 20px;
-        color: white;
-        cursor: pointer ;
     }
 
     .bg-asset{

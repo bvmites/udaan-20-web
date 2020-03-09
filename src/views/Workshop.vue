@@ -3,7 +3,8 @@
         <div class="main-container">
             <div class="events">
                 <p class="heading">Workshop</p>
-                <p class="event" v-for="event in deptEvents" @click="eventsDetail = event" v-bind:key="event">{{event.eventName}}</p>
+                <p class="event" v-for="event in deptEvents" @click="eventsDetail = event" v-bind:key="event">
+                    {{event.eventName}}</p>
             </div>
         </div>
 
@@ -56,14 +57,19 @@
                 }
             }
         },
-        created(){
+        created() {
             let self = this;
             self.deptEvents = events.workshop;
         },
         mounted() {
+            let t2 = new this.$gsap.TimelineMax();
+            t2.staggerFrom('.event', 0.6, {
+                x: -50,
+                y: 75,
+                autoAlpha: 0
+            }, 0.2);
         },
-        methods: {
-        }
+        methods: {}
     }
 </script>
 
@@ -79,18 +85,11 @@
         background: #0d0d0d;
     }
 
-    .events{
+    .events {
         margin-left: 8%;
     }
 
-    .event{
-        margin: 8px;
-        font-size: 20px;
-        color: white;
-        cursor: pointer ;
-    }
-
-    .bg-asset{
+    .bg-asset {
         position: fixed;
         z-index: -1;
         right: 50px;
@@ -101,30 +100,34 @@
     }
 
     @media screen and (max-width: 960px) {
-        .events{
+        .events {
             margin-top: 40px;
         }
-        .bg-asset{
+
+        .bg-asset {
             width: 70%;
         }
     }
+
     @media screen and (min-width: 1295px) {
-        .bg-asset{
+        .bg-asset {
             width: 50%;
         }
     }
 
     @media screen and (max-width: 768px) {
-        .bg-asset{
+        .bg-asset {
             right: 0;
             width: 80%;
         }
     }
+
     @media screen and (max-width: 556px) {
-        .main-container{
+        .main-container {
             margin-top: 150px;
         }
-        .bg-asset{
+
+        .bg-asset {
             left: 24px;
             bottom: 30px;
             width: 110%;
