@@ -12,6 +12,7 @@ import PulleyingTheFuture from "@/views/PulleyingTheFuture";
 import WireMoreToWireless from "@/views/WireMoreToWireless";
 import LightningYearsAhead from "@/views/LightningYearsAhead";
 import CyberClan from "@/views/CyberClan";
+import Cart from "@/components/Cart";
 
 Vue.use(Router)
 
@@ -31,6 +32,11 @@ export default new Router({
       path: '/about',
       name: 'About',
       component: About
+    },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: Cart
     },
     {
       path: '/civil',

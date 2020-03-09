@@ -1,6 +1,6 @@
 <template>
     <div id="Events" class="main background">
-        <div id="particles-js" class="bg"></div>
+        <div id="particles-js"></div>
         <canvas id="fluid" style="width: 100%; height: 100%;"/>
         <div class="events-container text-center">
             <div class="row m-0">
