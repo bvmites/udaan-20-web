@@ -143,7 +143,11 @@
             }
         },
         mounted() {
-            this.initParticles()
+            this.initParticles();
+            // this.setHeight();
+        },
+        created(){
+            // window.addEventListener("resize", this.setHeight);
         },
         methods: {
             initParticles() {
@@ -252,7 +256,14 @@
                     },
                     "retina_detect": true
                 })
-            }
+            },
+            // setHeight(){
+            //     let height = document.querySelector(".logos-container").offsetHeight;
+            //     console.log(height);
+            //     document.querySelectorAll('.col-4').forEach(function (el) {
+            //         el.style.height = height+"px";
+            //     })
+            // }
         }
     }
 </script>
@@ -339,7 +350,7 @@
         }
 
         .logos-container {
-            transform: scale(0.55);
+            transform: scale(0.7);
         }
 
         .logos-container:hover {
@@ -348,14 +359,11 @@
         }
     }
 
-
     .logos-container {
         width: inherit;
-        object-fit: contain;
+        /*object-fit: contain;*/
 
     }
-
-
 
     @keyframes updown-animation {
         0% {
