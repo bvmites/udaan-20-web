@@ -51,7 +51,7 @@
             return {
                 events,
                 deptEvents: [],
-                eventsDetail: {},
+                eventsDetail: null,
                 dept: {
                     name: "Lightning Years Ahead"
                 }

@@ -21,8 +21,9 @@
                     </div>
                     <div class="entryFee">Entry Fee: {{ eventsDetail.entryFee }}</div>
                     <div class="entryFee">Team Size: {{ eventsDetail.teamSize}}</div>
-                    <div class="managers">
+                    <div class="managers" v-if="eventsDetail.managers.length">
                         <div class="contact-text">Contact</div>
+                        <div class="name"></div>
                         <div class="manager" v-for="manager in eventsDetail.managers" v-bind:key="manager">
                             <div class="name">{{manager.name}}</div>
                             <div class="contact">{{manager.phone}}</div>
