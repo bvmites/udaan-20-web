@@ -16,8 +16,8 @@
 <!--                <div class="close-btn">-->
 <!--                    <i class="fa fa-close" @click="eventsDetail = null" aria-hidden="true"/>-->
 <!--                </div>-->
-                <div class="eventName">{{ eventsDetail.eventName }}</div>
-                <div class="tagline">{{ eventsDetail.tagline }}</div>
+                <div class="eventName hide-native-scrollbar">{{ eventsDetail.eventName }}</div>
+                <div class="tagline hide-native-scrollbar">{{ eventsDetail.tagline }}</div>
                 <div class="event-content hide-native-scrollbar">
                     <div class="rounds">
                         <div class="round" v-for="(round, index) in eventsDetail.rounds" v-bind:key="index">
@@ -71,8 +71,9 @@
             let t2 = new this.$gsap.TimelineMax();
             t2.staggerFrom('.event', .5, {
                 autoAlpha: 0,
-                rotation: -20,
-            }, 0.1);
+                rotation: -45,
+                y:-120,
+            }, 0.2);
         },
         methods: {},
         watch: {
@@ -113,7 +114,7 @@
         bottom: 30px;
         object-fit: fill;
         opacity: 0.8;
-        animation: bg-animation 3s 1 ease;
+        animation: bg-animation 2s 1 ease;
     }
 
     @media screen and (max-width: 960px) {

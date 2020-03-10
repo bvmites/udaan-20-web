@@ -19,7 +19,7 @@
     text-align: center;
     margin-top: 4px;
     font-size: 36px;
-    overflow: overlay;
+    overflow: scroll;
     text-overflow: clip;
     white-space: nowrap;
 }
@@ -28,7 +28,7 @@
     font-weight: 600;
     font-family: NovaSquare;
     text-align: center;
-    overflow: overlay;
+    overflow: scroll;
     text-overflow: clip;
     white-space: nowrap;
 }
