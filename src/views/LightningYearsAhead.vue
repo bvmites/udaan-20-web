@@ -13,6 +13,9 @@
 
         <transition name="fade">
             <div class="eventDescription" v-if="eventsDetail">
+<!--                <div class="close-btn">-->
+<!--                    <i class="fa fa-close" @click="eventsDetail = null" aria-hidden="true"/>-->
+<!--                </div>-->
                 <div class="eventName">{{ eventsDetail.eventName }}</div>
                 <div class="tagline">{{ eventsDetail.tagline }}</div>
                 <div class="event-content hide-native-scrollbar">
@@ -129,6 +132,7 @@
             bottom: -20px;
         }
     }
+
     @media screen and (min-width: 1400px) {
         .bg-asset {
             width: 65%;
@@ -156,21 +160,21 @@
     }
 
     @keyframes bg-animation {
-        0%{
+        0% {
             opacity: 0;
             right: -100px;
             bottom: -50px;
         }
-        20%{
+        20% {
             opacity: 0.9;
         }
-        30%{
+        30% {
             opacity: 0;
         }
-        50%{
+        50% {
             opacity: 0.6;
         }
-        70%{
+        70% {
             opacity: 0;
         }
     }
