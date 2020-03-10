@@ -1,5 +1,8 @@
 <template>
     <div id="WireMoreToWireless" class="background">
+        <div>
+            <img class="bg-asset" src="../assets/backgrounds/ecel-bg.svg" alt="">
+        </div>
         <div class="main-container">
             <div class="events">
                 <p class="heading">Wire More To Wireless</p>
@@ -81,7 +84,7 @@
     }
 
     .background {
-        background: #0d0d0d;
+        background: linear-gradient(to bottom right,#a455ff,#2b98cd);
     }
 
     .events{
@@ -91,11 +94,11 @@
     .bg-asset{
         position: fixed;
         z-index: -1;
-        right: 50px;
-        width: 70%;
+        right: 30px;
+        width: 55%;
         bottom: 30px;
         object-fit: fill;
-        opacity: 0.8;
+        animation: bg-animation 1.5s 1 ease;
     }
 
     @media screen and (max-width: 960px) {
@@ -108,7 +111,7 @@
     }
     @media screen and (min-width: 1295px) {
         .bg-asset{
-            width: 50%;
+            width: 45%;
         }
     }
 
@@ -123,9 +126,17 @@
             margin-top: 150px;
         }
         .bg-asset{
-            left: 24px;
-            bottom: 30px;
+            right: -48px;
+            bottom: 15px;
             width: 110%;
+        }
+    }
+
+    @keyframes bg-animation {
+        0%{
+            opacity: 0;
+            bottom: -100px;
+            right: 150px;
         }
     }
 </style>

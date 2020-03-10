@@ -1,5 +1,8 @@
 <template>
     <div id="LightningYearsAhead" class="background">
+        <div>
+            <img class="bg-asset" src="../assets/backgrounds/ee-bg.svg" alt="">
+        </div>
         <div class="main-container">
             <div class="events">
                 <p class="heading">Lightning Years Ahead</p>
@@ -92,7 +95,7 @@
     }
 
     .background {
-        background: #0d0d0d;
+        background: #002a4c;
     }
 
     .events {
@@ -102,11 +105,12 @@
     .bg-asset {
         position: fixed;
         z-index: -1;
-        right: 50px;
-        width: 70%;
+        right: -8px;
+        width: 85%;
         bottom: 30px;
         object-fit: fill;
         opacity: 0.8;
+        animation: bg-animation 3s 1 ease;
     }
 
     @media screen and (max-width: 960px) {
@@ -115,13 +119,20 @@
         }
 
         .bg-asset {
-            width: 70%;
+            width: 85%;
         }
     }
 
     @media screen and (min-width: 1295px) {
         .bg-asset {
-            width: 50%;
+            width: 75%;
+            bottom: -20px;
+        }
+    }
+    @media screen and (min-width: 1400px) {
+        .bg-asset {
+            width: 65%;
+            bottom: -20px;
         }
     }
 
@@ -138,9 +149,29 @@
         }
 
         .bg-asset {
-            left: 24px;
+            right: -35px;
             bottom: 30px;
-            width: 110%;
+            width: 125%;
+        }
+    }
+
+    @keyframes bg-animation {
+        0%{
+            opacity: 0;
+            right: -100px;
+            bottom: -50px;
+        }
+        20%{
+            opacity: 0.9;
+        }
+        30%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 0.6;
+        }
+        70%{
+            opacity: 0;
         }
     }
 </style>
