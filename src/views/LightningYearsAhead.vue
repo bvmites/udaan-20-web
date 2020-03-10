@@ -1,5 +1,8 @@
 <template>
     <div id="LightningYearsAhead" class="background">
+        <div>
+            <img class="bg-asset" src="../assets/backgrounds/ee-bg.svg" alt="">
+        </div>
         <div class="main-container">
             <div class="events">
                 <p class="heading">Lightning Years Ahead</p>
@@ -10,8 +13,11 @@
 
         <transition name="fade">
             <div class="eventDescription" v-if="eventsDetail">
-                <div class="eventName">{{ eventsDetail.eventName }}</div>
-                <div class="tagline">{{ eventsDetail.tagline }}</div>
+<!--                <div class="close-btn">-->
+<!--                    <i class="fa fa-close" @click="eventsDetail = null" aria-hidden="true"/>-->
+<!--                </div>-->
+                <div class="eventName hide-native-scrollbar">{{ eventsDetail.eventName }}</div>
+                <div class="tagline hide-native-scrollbar">{{ eventsDetail.tagline }}</div>
                 <div class="event-content hide-native-scrollbar">
                     <div class="rounds">
                         <div class="round" v-for="(round, index) in eventsDetail.rounds" v-bind:key="index">
@@ -51,7 +57,7 @@
             return {
                 events,
                 deptEvents: [],
-                eventsDetail: {},
+                eventsDetail: null,
                 dept: {
                     name: "Lightning Years Ahead"
                 }
@@ -65,8 +71,9 @@
             let t2 = new this.$gsap.TimelineMax();
             t2.staggerFrom('.event', .5, {
                 autoAlpha: 0,
-                rotation: -20,
-            }, 0.1);
+                rotation: -45,
+                y:-120,
+            }, 0.2);
         },
         methods: {},
         watch: {
@@ -92,7 +99,7 @@
     }
 
     .background {
-        background: #0d0d0d;
+        background: #002a4c;
     }
 
     .events {
@@ -102,11 +109,12 @@
     .bg-asset {
         position: fixed;
         z-index: -1;
-        right: 50px;
-        width: 70%;
+        right: -8px;
+        width: 85%;
         bottom: 30px;
         object-fit: fill;
         opacity: 0.8;
+        animation: bg-animation 2s 1 ease;
     }
 
     @media screen and (max-width: 960px) {
@@ -115,13 +123,21 @@
         }
 
         .bg-asset {
-            width: 70%;
+            width: 85%;
         }
     }
 
     @media screen and (min-width: 1295px) {
         .bg-asset {
-            width: 50%;
+            width: 75%;
+            bottom: -20px;
+        }
+    }
+
+    @media screen and (min-width: 1400px) {
+        .bg-asset {
+            width: 65%;
+            bottom: -20px;
         }
     }
 
@@ -138,9 +154,29 @@
         }
 
         .bg-asset {
-            left: 24px;
+            right: -35px;
             bottom: 30px;
-            width: 110%;
+            width: 125%;
+        }
+    }
+
+    @keyframes bg-animation {
+        0% {
+            opacity: 0;
+            right: -100px;
+            bottom: -50px;
+        }
+        20% {
+            opacity: 0.9;
+        }
+        30% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 0.6;
+        }
+        70% {
+            opacity: 0;
         }
     }
 </style>

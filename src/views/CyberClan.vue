@@ -12,8 +12,8 @@
 
         <transition name="fade">
             <div class="eventDescription" v-if="eventsDetail">
-                <div class="eventName">{{ eventsDetail.eventName }}</div>
-                <div class="tagline">{{ eventsDetail.tagline }}</div>
+                <div class="eventName hide-native-scrollbar">{{ eventsDetail.eventName }}</div>
+                <div class="tagline hide-native-scrollbar">{{ eventsDetail.tagline }}</div>
                 <div class="event-content hide-native-scrollbar">
                     <div class="rounds">
                         <div class="round" v-for="(round, index) in eventsDetail.rounds" v-bind:key="index">

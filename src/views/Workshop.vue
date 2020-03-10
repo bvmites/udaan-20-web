@@ -10,8 +10,8 @@
 
         <transition name="fade">
             <div class="eventDescription" v-if="eventsDetail">
-                <div class="eventName">{{ eventsDetail.eventName }}</div>
-                <div class="tagline">{{ eventsDetail.tagline }}</div>
+                <div class="eventName hide-native-scrollbar">{{ eventsDetail.eventName }}</div>
+                <div class="tagline hide-native-scrollbar">{{ eventsDetail.tagline }}</div>
                 <div class="event-content hide-native-scrollbar">
                     <div class="rounds">
                         <div class="round" v-for="(round, index) in eventsDetail.rounds" v-bind:key="index">
@@ -21,8 +21,9 @@
                     </div>
                     <div class="entryFee">Entry Fee: {{ eventsDetail.entryFee }}</div>
                     <div class="entryFee">Team Size: {{ eventsDetail.teamSize}}</div>
-                    <div class="managers">
+                    <div class="managers" v-if="eventsDetail.managers.length">
                         <div class="contact-text">Contact</div>
+                        <div class="name"></div>
                         <div class="manager" v-for="manager in eventsDetail.managers" v-bind:key="manager">
                             <div class="name">{{manager.name}}</div>
                             <div class="contact">{{manager.phone}}</div>
