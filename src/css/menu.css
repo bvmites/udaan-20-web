@@ -11,7 +11,7 @@ a:not([href]):not([tabindex]) {
 
 nav ul li:hover {
     transform: scale(1.2);
-    transition: all 0.2s ease ;
+    transition: all 0.2s ease;
 }
 
 .n-container {
@@ -24,7 +24,7 @@ nav ul li:hover {
     z-index: 100;
 }
 
-.nav-wrapper{
+.nav-wrapper {
     padding-right: 90px;
 }
 
@@ -50,7 +50,7 @@ nav {
     text-decoration: none;
 }
 
-.logo img{
+.logo img {
     height: 50px;
     object-fit: contain;
 }
@@ -137,7 +137,7 @@ nav ul li a {
         margin-left: 0;
     }
 
-    .nav-wrapper ul li{
+    .nav-wrapper ul li {
         color: #fff;
     }
 

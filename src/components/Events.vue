@@ -1,5 +1,5 @@
 <template>
-    <div id="Events" class="main background">
+    <div class="main background" id="Events">
         <div id="particles-js"></div>
         <canvas id="fluid" style="width: 100%; height: 100%;"/>
         <div class="events-container text-center">
@@ -10,50 +10,50 @@
                 <div class="col-lg-8 col-12">
                     <div class="row display-flex">
                         <div class="col-4">
-                            <div class="logos-container"  @click="$router.push('civil')">
-                                <img class="mx-auto d-block event-logo" src="../assets/logos/civil.svg" alt="">
-                                <img class="stars" src="../assets/logos/stars.svg" alt="">
-                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                            <div @click="$router.push('civil')" class="logos-container">
+                                <img alt="" class="mx-auto d-block event-logo" src="../assets/logos/civil.svg">
+                                <img alt="" class="stars" src="../assets/logos/stars.svg">
+                                <img alt="" class="logo-base" src="../assets/logos/base.svg">
                                 <p class="text-center event-title mt-4">The Road to Urbanization</p>
                             </div>
                         </div>
                         <div class="col-4">
-                            <div class="logos-container" @click="$router.push('cpit')">
-                                <img class="mx-auto d-block event-logo" src="../assets/logos/cpit.svg" alt="">
-                                <img class="stars" src="../assets/logos/stars.svg" alt="">
-                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                            <div @click="$router.push('cpit')" class="logos-container">
+                                <img alt="" class="mx-auto d-block event-logo" src="../assets/logos/cpit.svg">
+                                <img alt="" class="stars" src="../assets/logos/stars.svg">
+                                <img alt="" class="logo-base" src="../assets/logos/base.svg">
                                 <p class="text-center event-title mt-4">Cyber-Clan</p>
                             </div>
                         </div>
                         <div class="col-4">
-                            <div class="logos-container" @click="$router.push('ee')">
-                                <img class="mx-auto d-block event-logo" src="../assets/logos/ee.svg" alt="">
-                                <img class="stars" src="../assets/logos/stars.svg" alt="">
-                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                            <div @click="$router.push('ee')" class="logos-container">
+                                <img alt="" class="mx-auto d-block event-logo" src="../assets/logos/ee.svg">
+                                <img alt="" class="stars" src="../assets/logos/stars.svg">
+                                <img alt="" class="logo-base" src="../assets/logos/base.svg">
                                 <p class="text-center event-title mt-4">Lightning Years Ahead</p>
                             </div>
                         </div>
                         <div class="col-4">
-                            <div class="logos-container" @click="$router.push('ecel')">
-                                <img class="mx-auto d-block event-logo" src="../assets/logos/ecel.svg" alt="">
-                                <img class="stars" src="../assets/logos/stars.svg" alt="">
-                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                            <div @click="$router.push('ecel')" class="logos-container">
+                                <img alt="" class="mx-auto d-block event-logo" src="../assets/logos/ecel.svg">
+                                <img alt="" class="stars" src="../assets/logos/stars.svg">
+                                <img alt="" class="logo-base" src="../assets/logos/base.svg">
                                 <p class="text-center event-title mt-4">Wire-More to Wireless</p>
                             </div>
                         </div>
                         <div class="col-4">
-                            <div class="logos-container" @click="$router.push('mech')">
-                                <img class="mx-auto d-block event-logo" src="../assets/logos/mech.svg" alt="">
-                                <img class="stars" src="../assets/logos/stars.svg" alt="">
-                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                            <div @click="$router.push('mech')" class="logos-container">
+                                <img alt="" class="mx-auto d-block event-logo" src="../assets/logos/mech.svg">
+                                <img alt="" class="stars" src="../assets/logos/stars.svg">
+                                <img alt="" class="logo-base" src="../assets/logos/base.svg">
                                 <p class="text-center event-title mt-4">Pulleying the Future</p>
                             </div>
                         </div>
                         <div class="col-4">
-                            <div class="logos-container" @click="$router.push('workshop')">
-                                <img class="mx-auto d-block event-logo" src="../assets/logos/workshop.svg" alt="">
-                                <img class="stars" src="../assets/logos/stars.svg" alt="">
-                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                            <div @click="$router.push('workshop')" class="logos-container">
+                                <img alt="" class="mx-auto d-block event-logo" src="../assets/logos/workshop.svg">
+                                <img alt="" class="stars" src="../assets/logos/stars.svg">
+                                <img alt="" class="logo-base" src="../assets/logos/base.svg">
                                 <p class="text-center event-title mt-4">Workshop</p>
                             </div>
                         </div>
@@ -67,26 +67,26 @@
                 <div class="col-lg-8 col-12">
                     <div class="row display-flex">
                         <div class="col-4">
-                            <div class="logos-container" @click="$router.push('madhouse')">
-                                <img class="mx-auto d-block event-logo" src="../assets/logos/mad.svg" alt="">
-                                <img class="stars" src="../assets/logos/stars.svg" alt="">
-                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                            <div @click="$router.push('madhouse')" class="logos-container">
+                                <img alt="" class="mx-auto d-block event-logo" src="../assets/logos/mad.svg">
+                                <img alt="" class="stars" src="../assets/logos/stars.svg">
+                                <img alt="" class="logo-base" src="../assets/logos/base.svg">
                                 <p class="text-center event-title mt-4">M.A.D. House</p>
                             </div>
                         </div>
                         <div class="col-4">
-                            <div class="logos-container" @click="$router.push('starevent')">
-                                <img class="mx-auto d-block event-logo" src="../assets/logos/starevent.svg" alt="">
-                                <img class="stars" src="../assets/logos/stars.svg" alt="">
-                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                            <div @click="$router.push('starevent')" class="logos-container">
+                                <img alt="" class="mx-auto d-block event-logo" src="../assets/logos/starevent.svg">
+                                <img alt="" class="stars" src="../assets/logos/stars.svg">
+                                <img alt="" class="logo-base" src="../assets/logos/base.svg">
                                 <p class="text-center event-title mt-4">Flagship Events</p>
                             </div>
                         </div>
                         <div class="col-4">
-                            <div class="logos-container" @click="$router.push('nontech')">
-                                <img class="mx-auto d-block event-logo" src="../assets/logos/nontech.svg" alt="">
-                                <img class="stars" src="../assets/logos/stars.svg" alt="">
-                                <img class="logo-base" src="../assets/logos/base.svg" alt="">
+                            <div @click="$router.push('nontech')" class="logos-container">
+                                <img alt="" class="mx-auto d-block event-logo" src="../assets/logos/nontech.svg">
+                                <img alt="" class="stars" src="../assets/logos/stars.svg">
+                                <img alt="" class="logo-base" src="../assets/logos/base.svg">
                                 <p class="text-center event-title mt-4">Jack a Dull Boy?</p>
                             </div>
                         </div>
@@ -146,7 +146,7 @@
             this.initParticles();
             // this.setHeight();
         },
-        created(){
+        created() {
             // window.addEventListener("resize", this.setHeight);
         },
         methods: {
@@ -277,6 +277,7 @@
         display: flex;
         flex-wrap: wrap;
     }
+
     .row.display-flex > [class*='col-'] {
         display: flex;
     }
@@ -319,13 +320,13 @@
         animation: updown-animation 1.5s ease 1.5s infinite alternate, born-animation 1.5s ease 1;
     }
 
-    .stars{
+    .stars {
         position: absolute;
         animation-delay: 0.5s;
         animation: updown-animation 1.5s 1.5s alternate infinite;
     }
 
-    .logos-container{
+    .logos-container {
         cursor: pointer;
     }
 

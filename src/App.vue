@@ -8,16 +8,16 @@
 <script>
 
     import MenuComponent from "@/components/MenuComponent";
-  export default {
-    name: 'app',
-    components: {
-        MenuComponent,
-    },
-    data() {
-      return {
-      }
-    },
-    mounted() {
+
+    export default {
+        name: 'app',
+        components: {
+            MenuComponent,
+        },
+        data() {
+            return {}
+        },
+        mounted() {
+        }
     }
-  }
 </script>

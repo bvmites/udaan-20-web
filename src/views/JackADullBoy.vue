@@ -1,5 +1,5 @@
 <template>
-    <div id="JackADullBoy" class="background">
+    <div class="background" id="JackADullBoy">
         <canvas id="fluid" style="width: 100%; height: 100%;"/>
         <div class="main-container container">
             <div class="events">
@@ -10,8 +10,9 @@
                     <div class="col-12">
 
                         <div class="row">
-                            <div class="col-12 col-md-4 col-sm-6 event text-center" v-for="event in deptEvents" @click="eventsDetail = event"
-                                 v-bind:key="event">
+                            <div @click="eventsDetail = event" class="col-12 col-md-4 col-sm-6 event text-center"
+                                 v-bind:key="event"
+                                 v-for="event in deptEvents">
                                 {{event.eventName}}
                             </div>
                         </div>
@@ -28,7 +29,7 @@
                 <div class="tagline hide-native-scrollbar">{{ eventsDetail.tagline }}</div>
                 <div class="event-content hide-native-scrollbar">
                     <div class="rounds">
-                        <div class="round" v-for="(round, index) in eventsDetail.rounds" v-bind:key="index">
+                        <div class="round" v-bind:key="index" v-for="(round, index) in eventsDetail.rounds">
                             <span class="roundIndice">Round {{index + 1}} : </span>
                             <p class="round-text">{{ round}}</p>
                         </div>
@@ -37,7 +38,7 @@
                     <div class="entryFee">Team Size: {{ eventsDetail.teamSize}}</div>
                     <div class="managers">
                         <div class="contact-text">Contact</div>
-                        <div class="manager" v-for="manager in eventsDetail.managers" v-bind:key="manager">
+                        <div class="manager" v-bind:key="manager" v-for="manager in eventsDetail.managers">
                             <div class="name">{{manager.name}}</div>
                             <div class="contact">{{manager.phone}}</div>
                         </div>
@@ -49,7 +50,7 @@
                 </div>
                 <div class="bottom-part">
                     <div class="cart btn btn-success">Add to Cart</div>
-                    <div class="back btn btn-primary" @click="eventsDetail = null">Back</div>
+                    <div @click="eventsDetail = null" class="back btn btn-primary">Back</div>
                 </div>
             </div>
         </transition>
@@ -79,7 +80,7 @@
             let t2 = new this.$gsap.TimelineMax();
             t2.staggerFrom('.event', 0.4, {
                 rotationX: 90,
-                autoAlpha:0
+                autoAlpha: 0
             }, 0.1);
         },
         methods: {}
@@ -110,7 +111,7 @@
         opacity: 0.8;
     }
 
-    .event{
+    .event {
         margin: 0;
         padding: 4px;
     }

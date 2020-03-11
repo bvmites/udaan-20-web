@@ -1,5 +1,5 @@
 <template>
-    <div id="Cart" class="background">
+    <div class="background" id="Cart">
         <div class="container">
             <p class="text-center">This feature is coming soon!</p>
         </div>
@@ -15,11 +15,11 @@
 <style scoped>
     @import "../css/common_style.css";
 
-    .background{
+    .background {
         background: #0d0d0d;
     }
 
-    .container{
+    .container {
         color: white;
         margin-top: 100px;
     }

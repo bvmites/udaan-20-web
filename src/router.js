@@ -14,7 +14,7 @@ import LightningYearsAhead from "@/views/LightningYearsAhead";
 import CyberClan from "@/views/CyberClan";
 import Cart from "@/components/Cart";
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [

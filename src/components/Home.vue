@@ -1,15 +1,16 @@
 <template>
     <transition name="slide-up">
-        <div id="Home" class="main background">
-<!--            <div id="particles-js" class="background"></div>-->
-            <div id="particles-js" class="bg"></div>
+        <div class="main background" id="Home">
+            <!--            <div id="particles-js" class="background"></div>-->
+            <div class="bg" id="particles-js"></div>
             <canvas id="fluid" style="width: 100%; height: 100%;"/>
             <div class="main-container mx-auto d-block">
-                <img class="udaan_logo mx-auto d-block" src="../assets/logo.png" alt="">
+                <img alt="" class="udaan_logo mx-auto d-block" src="../assets/logo.png">
                 <p class="text-center date">7-9 April, 2020</p>
             </div>
             <div class="pullUp">
-                <a class="text-center" @click="$router.push('events')"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <a @click="$router.push('events')" class="text-center"><i aria-hidden="true"
+                                                                          class="fa fa-angle-down"></i></a>
             </div>
         </div>
     </transition>

@@ -2,8 +2,8 @@
     <div id="MenuComponent">
         <div class="n-container">
             <nav>
-                <input ref="checkbox" type="checkbox" id="nav" class="hidden">
-                <label for="nav" class="nav-btn">
+                <input class="hidden" id="nav" ref="checkbox" type="checkbox">
+                <label class="nav-btn" for="nav">
                     <i></i>
                     <i></i>
                     <i></i>
@@ -13,9 +13,10 @@
                 </div>
                 <div class="nav-wrapper">
                     <ul>
-                        <li v-for="navigation in navigations" v-bind:key="navigation"><a
+                        <li v-bind:key="navigation" v-for="navigation in navigations"><a
                                 @click="navigate(navigation.url)">{{ navigation.name }}</a></li>
-                        <li><a @click="navigate('cart')">Cart <i class="fa fa-cart-plus" aria-hidden="true"></i></a></li>
+                        <li><a @click="navigate('cart')">Cart <i aria-hidden="true" class="fa fa-cart-plus"></i></a>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -90,11 +91,11 @@
         font-weight: 400;
     }
 
-    a:hover{
+    a:hover {
         color: white;
     }
 
-    nav{
+    nav {
         font-family: Riviera;
     }
 

@@ -1,9 +1,9 @@
 <template>
-    <div id="Workshop" class="background">
+    <div class="background" id="Workshop">
         <div class="main-container">
             <div class="events">
                 <p class="heading">Workshop</p>
-                <p class="event" v-for="event in deptEvents" @click="eventsDetail = event" v-bind:key="event">
+                <p @click="eventsDetail = event" class="event" v-bind:key="event" v-for="event in deptEvents">
                     {{event.eventName}}</p>
             </div>
         </div>
@@ -14,7 +14,7 @@
                 <div class="tagline hide-native-scrollbar">{{ eventsDetail.tagline }}</div>
                 <div class="event-content hide-native-scrollbar">
                     <div class="rounds">
-                        <div class="round" v-for="(round, index) in eventsDetail.rounds" v-bind:key="index">
+                        <div class="round" v-bind:key="index" v-for="(round, index) in eventsDetail.rounds">
                             <span class="roundIndice">Round {{index + 1}} : </span>
                             <p class="round-text">{{ round}}</p>
                         </div>
@@ -24,7 +24,7 @@
                     <div class="managers" v-if="eventsDetail.managers.length">
                         <div class="contact-text">Contact</div>
                         <div class="name"></div>
-                        <div class="manager" v-for="manager in eventsDetail.managers" v-bind:key="manager">
+                        <div class="manager" v-bind:key="manager" v-for="manager in eventsDetail.managers">
                             <div class="name">{{manager.name}}</div>
                             <div class="contact">{{manager.phone}}</div>
                         </div>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="bottom-part">
                     <div class="cart btn btn-success">Add to Cart</div>
-                    <div class="back btn btn-primary" @click="eventsDetail = null">Back</div>
+                    <div @click="eventsDetail = null" class="back btn btn-primary">Back</div>
                 </div>
             </div>
         </transition>

@@ -1,5 +1,5 @@
 <template>
-    <div id="About" class="background">
+    <div class="background" id="About">
         <div id="particles-js"></div>
         <canvas id="fluid" style="width: 100%; height: 100%;"/>
         <div class="main-container container">
@@ -28,12 +28,12 @@
                 <div class="row p-2">
                     <p class="text-center col-12">Follow us on</p>
                     <div class="col-12">
-                        <a href="https://www.youtube.com/channel/UCnqRgS6O0MGF8sTYb_fHjWA"><i class="fa fa-youtube-play"
-                                                                                              aria-hidden="true"/></a>
-                        <a href="https://www.instagram.com/teamudaan/"><i class="fa fa-instagram"
-                                                                          aria-hidden="true"/></a>
-                        <a href="https://www.facebook.com/teamudaan19/"><i class="fa fa-facebook-square"
-                                                                           aria-hidden="true"/></a>
+                        <a href="https://www.youtube.com/channel/UCnqRgS6O0MGF8sTYb_fHjWA"><i aria-hidden="true"
+                                                                                              class="fa fa-youtube-play"/></a>
+                        <a href="https://www.instagram.com/teamudaan/"><i aria-hidden="true"
+                                                                          class="fa fa-instagram"/></a>
+                        <a href="https://www.facebook.com/teamudaan19/"><i aria-hidden="true"
+                                                                           class="fa fa-facebook-square"/></a>
                     </div>
                 </div>
             </div>

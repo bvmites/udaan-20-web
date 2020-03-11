@@ -18,42 +18,49 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Nidsans';
     src: url('../assets/font/Nidsans.ttf');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'TitilliumWeb';
     src: url('../assets/font/TitilliumWeb.ttf');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'TitilliumWeb-Bold';
     src: url('../assets/font/TitilliumWeb-Bold.ttf');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Iceberg';
     src: url('../assets/font/Iceberg.ttf');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'NovaSquare';
     src: url('../assets/font/NovaSquare.ttf');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Oswald';
     src: url('../assets/font/Oswald.ttf');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Oxanium-Bold';
     src: url('../assets/font/Oxanium-Bold.ttf');
